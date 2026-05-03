@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anniara Lima - Psicóloga | Terapia Cognitivo-Comportamental</title>
     <meta name="description"
-        content="Psicóloga Anniara Lima - Especialista em Terapia Cognitivo-Comportamental (TCC) online. CRP 07/32606. Tratamento para ansiedade, depressão e relacionamentos. Atendimento online seguro e confidencial. Agende sua consulta e transforme sua vida hoje mesmo.">
+        content="Psicóloga Anniara Lima - Especialista em TCC, Terapia do Esquema e ACT. CRP 07/32606. Atendimento online bilíngue (PT/EN). Psicopatologia, ansiedade, regulação emocional e autoconhecimento. Mestranda em Neuropsicologia.">
     <meta name="keywords"
-        content="psicóloga, terapia cognitivo-comportamental, TCC, terapeuta TCC, ansiedade, depressão, psicoterapia online, Anniara Lima">
+        content="psicóloga, terapia cognitivo-comportamental, TCC, terapia do esquema, ACT, psicopatologia, neuropsicologia, ansiedade, psicoterapia online, Anniara Lima">
     <meta name="author" content="Anniara Lima">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Anniara Lima - Psicóloga | Terapia Cognitivo-Comportamental">
@@ -26,7 +26,7 @@
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "name": "Anniara Lima - Psicóloga",
-      "description": "Psicóloga especialista em Terapia Cognitivo-Comportamental (TCC). Atendimento online para ansiedade, depressão e relacionamentos.",
+      "description": "Psicóloga especialista em TCC, Terapia do Esquema e ACT. Atendimento online bilíngue para adultos.",
       "url": "https://anniaralima.com",
       "telephone": "+34678217421",
       "email": "anniarallima@gmail.com",
@@ -35,11 +35,11 @@
         "addressCountry": "BR"
       },
       "medicalSpecialty": "Psicologia",
-      "availableService": {
-        "@type": "MedicalTherapy",
-        "name": "Terapia Cognitivo-Comportamental",
-        "description": "Tratamento para ansiedade, depressão e relacionamentos"
-      },
+      "availableService": [
+        {"@type": "MedicalTherapy", "name": "Terapia Cognitivo-Comportamental"},
+        {"@type": "MedicalTherapy", "name": "Terapia do Esquema"},
+        {"@type": "MedicalTherapy", "name": "Terapia de Aceitação e Compromisso (ACT)"}
+      ],
       "sameAs": [
         "https://instagram.com/psi.anniaralima",
         "https://www.linkedin.com/in/anniara-lima"
@@ -47,6 +47,9 @@
       "image": "https://anniaralima.com/images/IMG_9437.webp"
     }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -54,9 +57,18 @@
                 extend: {
                     colors: {
                         primary: '#346e77',
+                        'primary-dark': '#2a5960',
                         secondary: '#d7e1e3',
                         accent: '#f6f1ea',
-                        primary_low: '#79BAC4'
+                        primary_low: '#79BAC4',
+                        warm: '#C4956A',
+                        'warm-light': '#E8D5C0',
+                        'soft-bg': '#F8F5F0',
+                        'soft-bg-alt': '#F0EBE3'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif']
                     }
                 }
             }
@@ -65,34 +77,24 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-soft-bg font-sans">
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
+            <div class="flex justify-between items-center h-18 py-3">
                 <div class="flex items-center">
-                    <a href="#home"
-                        class="text-2xl font-bold text-primary hover:text-primary_low transition duration-300 cursor-pointer">Anniara
-                        Lima</a>
-                    <!-- <span class="ml-2 text-sm text-gray-500">CRP: 07/32606</span> -->
+                    <a href="#home" class="text-2xl font-serif font-bold text-primary hover:text-primary_low transition duration-300 cursor-pointer">Anniara Lima</a>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#home"
-                            class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Home</a>
-                        <a href="#sobre"
-                            class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Sobre</a>
-                        <a href="#trabalho"
-                            class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Meu
-                            Trabalho</a>
-                        <a href="#tratamentos"
-                            class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Tratamentos</a>
-                        <a href="#beneficios"
-                            class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium">Benefícios</a>
-                    </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-primary px-4 py-2 text-sm font-medium relative">Home</a>
+                    <a href="#sobre" class="nav-link text-gray-600 hover:text-primary px-4 py-2 text-sm font-medium relative">Sobre</a>
+                    <a href="#trabalho" class="nav-link text-gray-600 hover:text-primary px-4 py-2 text-sm font-medium relative">Meu Trabalho</a>
+                    <a href="#tratamentos" class="nav-link text-gray-600 hover:text-primary px-4 py-2 text-sm font-medium relative">Tratamentos</a>
+                    <a href="#beneficios" class="nav-link text-gray-600 hover:text-primary px-4 py-2 text-sm font-medium relative">Benefícios</a>
+                    <a href="#agendar" class="ml-4 bg-primary text-white font-semibold py-2.5 px-6 rounded-full text-sm hover:bg-primary-dark hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">Agendar</a>
                 </div>
                 <div class="md:hidden">
-                    <button class="text-gray-700 hover:text-primary">
+                    <button id="menuToggle" class="text-gray-700 hover:text-primary p-2" aria-label="Abrir menu">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -100,345 +102,433 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="bg-gradient-to-br from-primary to-primary_low text-white py-10 transition-section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-center">
-                <!-- Imagem de destaque do Hero -->
-                <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
-                    <!-- Substitua o src abaixo pela imagem desejada -->
-                    <img src="images/IMG_9437.webp"
-                        alt="Psicóloga Anniara Lima - Especialista em Terapia Cognitivo-Comportamental"
-                        class="rounded-2xl shadow-lg w-full max-w-2xl h-auto object-cover border-4 border-white/30 mx-auto" />
-                </div>
-                <div class="md:w-1/2 text-center">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                        Psicóloga Anniara Lima - Terapia Cognitivo-Comportamental Online
-                    </h1>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                        Retome o controle da sua vida.
-                    </h2>
-                    <p class="text-xl md:text-2xl mb-8 text-purple-100">
-                        É possível se sentir melhor estando em casa ou em qualquer lugar do mundo.
-                    </p>
-                    <p class="text-lg mb-8 text-purple-200">
-                        Conheça a <strong>Terapia Cognitivo-Comportamental</strong> online e marque seu atendimento
-                        agora.
-                    </p>
-                    <a href="#agendar"
-                        class="bg-white text-primary font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300 inline-block">
-                        Agende sua consulta!
-                    </a>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] invisible opacity-0 transition-all duration-300">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="menuOverlay"></div>
+        <div class="absolute right-0 top-0 h-full w-72 bg-white shadow-2xl transform translate-x-full transition-transform duration-300" id="menuPanel">
+            <div class="flex justify-between items-center p-6 border-b border-gray-100">
+                <span class="font-serif font-bold text-primary text-lg">Menu</span>
+                <button id="menuClose" class="text-gray-500 hover:text-primary p-2" aria-label="Fechar menu">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="flex flex-col p-6 space-y-2">
+                <a href="#home" class="mobile-nav-link text-gray-700 hover:text-primary hover:bg-primary/5 px-4 py-3 rounded-xl text-base font-medium transition-all">Home</a>
+                <a href="#sobre" class="mobile-nav-link text-gray-700 hover:text-primary hover:bg-primary/5 px-4 py-3 rounded-xl text-base font-medium transition-all">Sobre</a>
+                <a href="#trabalho" class="mobile-nav-link text-gray-700 hover:text-primary hover:bg-primary/5 px-4 py-3 rounded-xl text-base font-medium transition-all">Meu Trabalho</a>
+                <a href="#tratamentos" class="mobile-nav-link text-gray-700 hover:text-primary hover:bg-primary/5 px-4 py-3 rounded-xl text-base font-medium transition-all">Tratamentos</a>
+                <a href="#beneficios" class="mobile-nav-link text-gray-700 hover:text-primary hover:bg-primary/5 px-4 py-3 rounded-xl text-base font-medium transition-all">Benefícios</a>
+                <div class="pt-4 border-t border-gray-100 mt-4">
+                    <a href="#agendar" class="block text-center bg-primary text-white font-semibold py-3 px-6 rounded-full hover:bg-primary-dark transition-all">Agendar Consulta</a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-br from-primary via-primary-dark to-primary_low text-white pt-16 md:pt-24 pb-32 md:pb-40 transition-section overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-primary_low rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <div class="md:w-5/12 flex justify-center">
+                    <img src="images/IMG_9437.webp"
+                        alt="Psicóloga Anniara Lima - Especialista em Terapia Cognitivo-Comportamental"
+                        class="rounded-3xl shadow-2xl w-full max-w-lg h-auto object-cover border-4 border-white/20 hero-image" />
+                </div>
+                <div class="md:w-7/12 text-center md:text-left">
+                    <span class="inline-block bg-white/15 backdrop-blur-sm text-white/90 text-sm font-medium px-4 py-1.5 rounded-full mb-6">CRP 07/32606 • Atendimento Online</span>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Cuide da sua<br>saúde mental
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 text-white/80 max-w-xl leading-relaxed">
+                        TCC, Terapia do Esquema e ACT online, com acolhimento e evidências científicas. Retome o controle da sua vida de qualquer lugar do mundo.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#agendar" class="cta-button bg-white text-primary font-bold py-4 px-8 rounded-full text-lg hover:bg-accent hover:shadow-xl transition-all duration-300 inline-block hover:-translate-y-1">
+                            Agende sua consulta
+                        </a>
+                        <a href="#sobre" class="border-2 border-white/40 text-white font-semibold py-4 px-8 rounded-full text-lg hover:bg-white/10 transition-all duration-300 inline-block">
+                            Conheça-me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Wave divider -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+            <svg class="relative block w-full h-20 md:h-32" viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,60 C360,100 720,0 1080,50 C1260,75 1380,65 1440,60 L1440,100 L0,100 Z" fill="#ffffff"></path>
+            </svg>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-white transition-section">
+    <section class="py-20 bg-white transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-2xl text-primary"></i>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+                <div class="feature-card text-center p-6 rounded-2xl hover:bg-soft-bg transition-all duration-300 cursor-default group">
+                    <div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-shield-alt text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Ambiente seguro</h3>
+                    <h3 class="text-base font-semibold text-gray-800">Ambiente seguro</h3>
                 </div>
-                <div class="text-center">
-                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-user-md text-2xl text-primary"></i>
+                <div class="feature-card text-center p-6 rounded-2xl hover:bg-soft-bg transition-all duration-300 cursor-default group">
+                    <div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-user-md text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Suporte Profissional Especializado</h3>
+                    <h3 class="text-base font-semibold text-gray-800">Suporte Profissional</h3>
                 </div>
-                <div class="text-center">
-                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-bullseye text-2xl text-primary"></i>
+                <div class="feature-card text-center p-6 rounded-2xl hover:bg-soft-bg transition-all duration-300 cursor-default group">
+                    <div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-bullseye text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Abordagem objetiva, foco em mudanças práticas</h3>
+                    <h3 class="text-base font-semibold text-gray-800">Foco em mudanças práticas</h3>
                 </div>
-                <div class="text-center">
-                    <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-clock text-2xl text-primary"></i>
+                <div class="feature-card text-center p-6 rounded-2xl hover:bg-soft-bg transition-all duration-300 cursor-default group">
+                    <div class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-clock text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
                     </div>
-                    <h3 class="text-lg font-semibold mb-2">Horários flexíveis, no Brasil e pelo mundo</h3>
+                    <h3 class="text-base font-semibold text-gray-800">Horários flexíveis</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tratamentos Section -->
-    <section id="tratamentos" class="py-16 bg-gray-50 transition-section">
+    <!-- Quem eu Atendo Section -->
+    <section class="py-20 bg-soft-bg transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">TIPOS DE TRATAMENTO</h2>
+            <div class="text-center mb-14">
+                <span class="text-warm font-semibold text-sm tracking-widest uppercase">Para quem é</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">Quem eu Atendo</h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Trabalho com pessoas que buscam se entender de verdade — e estão prontas para transformar esse autoconhecimento em mudança real.</p>
+            </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Ansiedade e Depressão -->
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <h3 class="text-2xl font-bold text-primary mb-4">Ansiedade e Depressão</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Sentir-se constantemente abatido pela depressão ou sobrecarregado pela ansiedade pode ser
-                        esmagador. A boa notícia é que a terapia pode ser um passo importante em direção à recuperação.
-                        Ao trabalhar com um terapeuta especializado, você terá a oportunidade de explorar as causas
-                        subjacentes dessas condições, aprender estratégias eficazes para gerenciar os sintomas e
-                        redescobrir o bem-estar emocional. Desenvolvendo habilidades de enfrentamento para recuperar o
-                        controle sobre sua vida.
+                <div class="relative bg-white rounded-3xl p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-primary transition-all duration-300">
+                        <i class="fas fa-compass text-xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3">Pessoas reflexivas</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Você sente que pensa demais, questiona o sentido das coisas e busca um <strong>propósito de vida</strong> mais claro. A terapia ajuda a transformar essa reflexão em direção e ação.
                     </p>
                 </div>
-
-                <!-- Relacionamentos Saudáveis -->
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <h3 class="text-2xl font-bold text-primary mb-4">Relacionamentos Saudáveis</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Você tem dificuldade em manter relacionamentos saudáveis? Relações interpessoais podem ser
-                        fontes de grande felicidade, mas também de estresse e conflito. A terapia pode ajudar a melhorar
-                        a comunicação, resolver conflitos e desenvolver habilidades de relacionamento saudáveis.
-                        Descubra como identificar padrões de comportamento prejudiciais, estabelecer limites e criar
-                        conexões mais positivas com os outros.
+                <div class="relative bg-white rounded-3xl p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-primary transition-all duration-300">
+                        <i class="fas fa-hand-holding-heart text-xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3">Quem se auto-sacrifica</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Você sempre coloca o outro em primeiro lugar e tem dificuldade em dizer não? Juntos, trabalhamos para <strong>estabelecer limites saudáveis</strong> sem culpa.
                     </p>
                 </div>
-
-                <!-- Autocontrole Financeiro -->
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <h3 class="text-2xl font-bold text-primary mb-4">Autocontrole Financeiro</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Já se sentiu perdido, angustiado e sem controle com suas demandas financeiras? Esse sentimento
-                        pode gerar baixa autoestima, insegurança, e até mesmo depressão. Através da terapia, compreenda
-                        os aspectos emocionais, comportamentais e cognitivos que te levam a ter uma relação difícil com
-                        o seu dinheiro. Saiba como a ciência ensina a gastar menos, guardar mais e investir melhor.
+                <div class="relative bg-white rounded-3xl p-8 border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+                    <div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-primary transition-all duration-300">
+                        <i class="fas fa-wind text-xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3">Quem vive no caos emocional</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Ansiedade constante, excesso de identificação com as emoções, sensação de estar fora de controle. Te ajudo a <strong>entender e regular</strong> o que você sente.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como eu Ajudo Section -->
+    <section class="py-20 bg-white transition-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-warm font-semibold text-sm tracking-widest uppercase">Meu diferencial</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2 mb-6">Como eu Ajudo</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Muitos pacientes chegam até mim achando que <strong>eles são o problema</strong>. Trabalho bastante com <strong>psicopatologia</strong>, e parte do meu diferencial é identificar diagnósticos e padrões que outros profissionais não perceberam.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Atendo adultos com <strong>TCC, Terapia do Esquema e ACT</strong>, tanto para demandas agudas quanto questões mais crônicas e de personalidade. Minha abordagem combina escuta genuína com ferramentas baseadas em evidências.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Acredito na <strong>liberdade e autenticidade</strong> — meu objetivo é te dar as ferramentas para que você não dependa da terapia para sempre.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-search text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-gray-900">Avaliação diagnóstica</p>
+                                <p class="text-xs text-gray-500">Entender o que de fato está acontecendo</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-puzzle-piece text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-gray-900">Padrões ocultos</p>
+                                <p class="text-xs text-gray-500">Identificar o que outros não viram</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-globe-americas text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-gray-900">Bilíngue</p>
+                                <p class="text-xs text-gray-500">Atendimento em Português e Inglês</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-medal text-primary text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-gray-900">Psicóloga hospitalar</p>
+                                <p class="text-xs text-gray-500">Anos de UTI, urgência e emergência</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <img src="images/IMG_9519-1.webp" alt="Psicóloga Anniara Lima"
+                            class="rounded-3xl w-full max-w-sm h-auto object-cover shadow-xl" />
+                        <div class="absolute -bottom-4 -left-4 bg-warm text-white rounded-2xl py-3 px-5 shadow-lg hidden md:block">
+                            <p class="text-sm font-semibold"><i class="fas fa-heart mr-1.5"></i>Dedicação &amp; cuidado</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sobre Section -->
-    <section id="sobre" class="py-16 bg-white transition-section">
+    <section id="sobre" class="py-20 bg-soft-bg transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Foto profissional da Anniara -->
-                <div class="flex justify-center md:justify-end mb-8 md:mb-0">
-                    <!-- Substitua o src abaixo pela foto profissional desejada -->
-                    <img src="images/IMG_9519-1.webp" alt="Psicóloga Anniara Lima - Especialista em TCC e Saúde Mental"
-                        class="rounded-2xl w-full max-w-2xl h-auto object-cover border-4 border-primary/30 shadow-lg mx-auto" />
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <img src="images/IMG_9537.webp" alt="Psicóloga Anniara Lima - Especialista em TCC e Saúde Mental"
+                        class="rounded-3xl w-full max-w-lg h-auto object-cover shadow-xl mx-auto" />
+                    <div class="absolute -bottom-6 -right-6 bg-primary text-white rounded-2xl p-5 shadow-lg hidden md:block">
+                        <p class="text-3xl font-bold font-serif">+1000</p>
+                        <p class="text-sm text-white/80">pacientes atendidos</p>
+                    </div>
                 </div>
                 <div>
-                    <h2 class="text-3xl font-bold mb-6">SOBRE MIM</h2>
-                    <h3 class="text-2xl font-bold text-primary mb-4">Anniara Lima</h3>
-                    <p class="text-gray-600 mb-4"><strong>CRP: 07/32606</strong></p>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Sou Psicóloga (UFSM), <strong>Especialista em Saúde</strong> pelo programa de Residência
-                        Multiprofissional em Saúde: Intensivismo, Urgência e Emergência (HSC – UNISC), aperfeiçoada em
-                        <strong>Terapia Cognitivo-Comportamental</strong> (UFSM), <strong>Comunicação
-                            Não-Violenta</strong> (UFSM), Atendimento Psicológico em <strong>Situações de Crise</strong>
-                        (Sanar Saúde), <strong>Relações Familiares</strong> (UFSM) e <strong>supervisora em
-                            Psicologia</strong>.
+                    <span class="text-warm font-semibold text-sm tracking-widest uppercase">Conheça sua psicóloga</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2 mb-6">Sobre Mim</h2>
+                    <h3 class="text-xl font-semibold text-primary mb-2">Anniara Lima</h3>
+                    <span class="inline-block bg-warm/15 text-warm font-semibold text-xs tracking-wider px-3 py-1 rounded-full mb-5">CRP: 07/32606</span>
+                    <p class="text-gray-600 leading-relaxed mb-5">
+                        Sou Psicóloga (UFSM), <strong>Especialista em Saúde</strong> com título pelo CRP, pelo programa de Residência
+                        Multiprofissional em Saúde: Intensivismo, Urgência e Emergência (HSC – UNISC). Atualmente cursando <strong>Mestrado em Neuropsicologia</strong> e finalizando pós-graduação em <strong>ACT, DBT e Terapia do Esquema</strong>.
                     </p>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Já atendi mais de 1000 clientes.
+                    <p class="text-gray-600 leading-relaxed mb-5">
+                        Já fui <strong>supervisora de estágio</strong> em Psicologia e atuo na clínica há <strong>5 anos</strong>. Ao longo da minha trajetória, trabalhei como psicóloga hospitalar, estive na linha de frente durante a pandemia de COVID-19 em UTIs, e fui voluntária no Tummi Coronavírus.
                     </p>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Ao longo da minha trajetória, estive junto de pacientes e familiares nos piores momentos de suas
-                        vidas. Durante a pandemia de COVID-19, fui da linha de frente, em UTIs. Também fui voluntária no
-                        Tummi Coronavírus, projeto pioneiro de atendimento online aos pacientes em crise psicológica
-                        devido ao COVID-19.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Entendi a importância do cuidado, suporte e respeito às nossas necessidades para que possamos
-                        passar pelas situações difíceis que a vida repentinamente traz. Acredito no compromisso com quem
-                        eu trabalho. Estamos juntos nesta luta. Você terá acesso ao meu cuidado integral, sempre que
-                        precisar.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Trabalho de forma segura e sigilosa, com atendimento clínico online para pacientes de todo o
-                        mundo.
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Acredito no compromisso com quem eu trabalho — você terá acesso ao meu cuidado integral, sempre que precisar. Atendimento clínico online, seguro e sigiloso, para pacientes de todo o mundo.
                     </p>
                     <a href="#agendar"
-                        class="bg-primary text-white font-bold py-3 px-6 rounded-full hover:bg-purple-700 transition duration-300 inline-block">
-                        Agende sua consulta!
+                        class="bg-primary text-white font-bold py-3.5 px-8 rounded-full hover:bg-primary-dark hover:shadow-lg transition-all duration-300 inline-block hover:-translate-y-0.5">
+                        Agende sua consulta
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Como Funciona Section -->
-    <section id="trabalho" class="py-16 bg-gray-50 transition-section">
+    <!-- Tratamentos Section (fused with Benefícios) -->
+    <section id="tratamentos" class="py-20 bg-white transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">COMO FUNCIONA MEU TRABALHO</h2>
-            <div class="grid md:grid-cols-5 gap-8">
-                <div class="text-center">
-                    <div
-                        class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                        1</div>
-                    <h3 class="text-lg font-semibold mb-2">Agende sua primeira sessão</h3>
-                    <p class="text-gray-600 text-sm">Dê o primeiro passo em busca da sua qualidade de vida. Envie uma
-                        mensagem para mim no Whatsapp.</p>
-                </div>
-                <div class="text-center">
-                    <div
-                        class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                        2</div>
-                    <h3 class="text-lg font-semibold mb-2">Avaliação psicológica</h3>
-                    <p class="text-gray-600 text-sm">Começamos a nos conhecer e entender como podemos trabalhar para a
-                        sua melhora.</p>
-                </div>
-                <div class="text-center">
-                    <div
-                        class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                        3</div>
-                    <h3 class="text-lg font-semibold mb-2">Tratamento</h3>
-                    <p class="text-gray-600 text-sm">Eu irei te guiar pela jornada de autocuidado que planejamos.</p>
-                </div>
-                <div class="text-center">
-                    <div
-                        class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                        4</div>
-                    <h3 class="text-lg font-semibold mb-2">Planejamento para a alta</h3>
-                    <p class="text-gray-600 text-sm">Criamos estratégias para que você consiga manter os resultados.</p>
-                </div>
-                <div class="text-center">
-                    <div
-                        class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                        5</div>
-                    <h3 class="text-lg font-semibold mb-2">Alta</h3>
-                    <p class="text-gray-600 text-sm">Você conseguiu se tornar o seu próprio terapeuta!</p>
-                </div>
+            <div class="text-center mb-14">
+                <span class="text-warm font-semibold text-sm tracking-widest uppercase">Áreas de atuação</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">Como a Terapia Pode te Ajudar</h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Utilizo TCC, Terapia do Esquema e ACT para tratar cada caso de forma personalizada e baseada em evidências.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Benefícios Section -->
-    <section id="beneficios" class="py-16 bg-white transition-section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">COMO A TERAPIA PODE TE AJUDAR</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-br from-primary/10 to-purple-700/10 rounded-lg p-8">
-                    <div class="text-4xl font-bold text-primary mb-4">01</div>
-                    <h3 class="text-xl font-semibold mb-4">Lidar com stress e ansiedade</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Desenvolva estratégias de autocuidado que se encaixam na sua rotina. Conheça seus gatilhos e
-                        saiba como diminuir a força dos mesmos. Entenda como se fortalecer para manejar as situações
-                        estressantes e ansiogênicas.
+                <div class="bg-gradient-to-br from-soft-bg to-white rounded-3xl shadow-md p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-primary transition-all duration-300">
+                        <i class="fas fa-brain text-xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3">Ansiedade e Regulação Emocional</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Explore as causas da ansiedade e depressão. Conheça seus gatilhos e aprenda estratégias eficazes para gerenciar os sintomas.
                     </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Estratégias de autocuidado</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Gestão de gatilhos emocionais</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Regulação emocional</li>
+                    </ul>
                 </div>
-                <div class="bg-gradient-to-br from-primary/10 to-purple-700/10 rounded-lg p-8">
-                    <div class="text-4xl font-bold text-primary mb-4">02</div>
-                    <h3 class="text-xl font-semibold mb-4">Mudanças na vida</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Entenda como se adaptar às constantes mudanças da vida, estando mais forte para lidar com elas.
-                        Aprenda a trabalhar com ferramentas emocionais e desenvolva novos recursos de enfrentamento.
+                <div class="bg-gradient-to-br from-soft-bg to-white rounded-3xl shadow-md p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-primary transition-all duration-300">
+                        <i class="fas fa-heart text-xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3">Relacionamentos e Limites</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Identifique padrões prejudiciais, melhore a comunicação e adapte-se às mudanças da vida com mais recursos emocionais.
                     </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Limites saudáveis sem culpa</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Comunicação assertiva</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Adaptação a mudanças</li>
+                    </ul>
                 </div>
-                <div class="bg-gradient-to-br from-primary/10 to-purple-700/10 rounded-lg p-8">
-                    <div class="text-4xl font-bold text-primary mb-4">03</div>
-                    <h3 class="text-xl font-semibold mb-4">Fim da procrastinação</h3>
-                    <p class="text-gray-700 leading-relaxed">
-                        Pare de procrastinar os seus objetivos. Entenda suas crenças e emoções limitantes. Perceba que
-                        partes da sua rotina tem dificultado a realização de seus sonhos e tenha um plano de ação
-                        organizado para mudar isto.
+                <div class="bg-gradient-to-br from-soft-bg to-white rounded-3xl shadow-md p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-primary transition-all duration-300">
+                        <i class="fas fa-chart-line text-xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-3">Autoconhecimento e Crescimento</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm mb-4">
+                        Entenda suas crenças limitantes, supere a procrastinação e compreenda sua relação com o dinheiro e seus objetivos de vida.
                     </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Empoderamento financeiro</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Propósito e direção de vida</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Autonomia emocional</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Depoimentos Section -->
-    <section class="py-16 bg-gray-50 transition-section">
+    <section class="py-20 bg-soft-bg transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12">DEPOIMENTOS DE PACIENTES</h2>
+            <div class="text-center mb-14">
+                <span class="text-warm font-semibold text-sm tracking-widest uppercase">Depoimentos</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">O que Dizem Meus Pacientes</h2>
+            </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="bg-white rounded-3xl shadow-md p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 relative">
+                    <div class="absolute top-6 right-8 text-6xl font-serif text-primary/10 leading-none">\u201c</div>
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-primary text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-gray-600 text-sm">Paciente desde 2023</p>
+                        <div class="flex text-yellow-400 text-sm space-x-0.5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic testimonial-text"
+                    <p class="text-gray-600 italic text-sm leading-relaxed testimonial-text"
                         data-full-text="Anni. Embora eu me considere razoavelmente bom com as palavras, às vezes palavras faltam quando se trata de sentimentos. Eu sou tão grato a você por tudo que vc faz por mim, que nem sempre sei como demonstrar isso. Ainda assim hoje que te agradecer especialmente por me fazer ver o lado bom, até na minha tristeza. Eu oro para que Deus te faça muito próspera no seu trabalho, que você possa alcançar e abençoar a muitas vidas assim como faz por mim. Por mais que pareça banal, eu quero te dizer mais uma vez OBRIGADO!">
-                        "Anni. Embora eu me considere razoavelmente bom com as palavras, às vezes palavras faltam quando
-                        se trata de sentimentos. Eu sou tão grato a você por tudo que vc faz por mim, que nem sempre sei
-                        como demonstrar isso. Ainda assim hoje que te agradecer especialmente por me fazer ver o lado
-                        bom, até na minha tristeza..."
+                        "Eu sou tão grato a você por tudo que vc faz por mim. Ainda assim hoje que te agradecer especialmente por me fazer ver o lado bom, até na minha tristeza..."
                     </p>
-                    <div class="text-right">
-                        <button class="text-primary hover:text-primary_low font-medium text-sm mt-2 testimonial-toggle">
-                            Ver mais
-                        </button>
+                    <div class="flex items-center justify-between mt-5 pt-4 border-t border-gray-100">
+                        <p class="text-gray-400 text-xs">Paciente desde 2023</p>
+                        <button class="text-primary hover:text-primary_low font-medium text-xs testimonial-toggle">Ver mais</button>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="bg-white rounded-3xl shadow-md p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 relative">
+                    <div class="absolute top-6 right-8 text-6xl font-serif text-primary/10 leading-none">\u201c</div>
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-primary text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-gray-600 text-sm">Paciente desde 2024</p>
+                        <div class="flex text-yellow-400 text-sm space-x-0.5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic testimonial-text"
+                    <p class="text-gray-600 italic text-sm leading-relaxed testimonial-text"
                         data-full-text="Agora com um pouco mais de tempo quero passar p/ te agradecer por toda tua ajuda. Com certeza tive um 2024 incrível após tua ajuda. Jamais vou esquecer como eu reagi diante de todas as mudanças, estresses e ansiedades, durante todo o meu processo de recém casada, aplicação para o mestrado e mudança de país... até hoje, não consigo acreditar que me tornei 'independente' e minha melhor amiga diante de um momento difícil, aprendi a lidar com minhas emoções e muito mais que isso... aprendi a reconhecer uma possível crise de ansiedade e a cuidar de mim mesma durante a crise. Não canso de dizer o quanto fui abençoada por ter encontrado uma profissional tão incrível, me ensinaste a cuidar de mim mesma e até mesmo dos outros. Te parabenizo pelo teu excelente trabalho, SEMPRE baseado em evidências científicas e na tua vasta experiência. És incrível!! Obrigada por tudo!! Eu poderia escrever um livro com tudo o que aprendi contigo, consigo dizer que sou outra pessoa, um ser muito mais evoluído 😂. Ansiosa p/ um ano de 2025 com muitos aprendizados, também!! 😁✌️">
-                        "Agora com um pouco mais de tempo quero passar p/ te agradecer por toda tua ajuda. Com certeza
-                        tive um 2024 incrível após tua ajuda. Jamais vou esquecer como eu reagi diante de todas as
-                        mudanças, estresses e ansiedades, durante todo o meu processo de recém casada, aplicação para o
-                        mestrado e mudança de país... até hoje, não consigo acreditar que me tornei 'independente' e
-                        minha melhor amiga diante de um momento difícil..."
+                        "Com certeza tive um 2024 incrível após tua ajuda. Aprendi a lidar com minhas emoções e a reconhecer uma possível crise de ansiedade..."
                     </p>
-                    <div class="text-right">
-                        <button class="text-primary hover:text-primary_low font-medium text-sm mt-2 testimonial-toggle">
-                            Ver mais
-                        </button>
+                    <div class="flex items-center justify-between mt-5 pt-4 border-t border-gray-100">
+                        <p class="text-gray-400 text-xs">Paciente desde 2024</p>
+                        <button class="text-primary hover:text-primary_low font-medium text-xs testimonial-toggle">Ver mais</button>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="bg-white rounded-3xl shadow-md p-8 border border-gray-100 hover:shadow-xl transition-all duration-300 relative">
+                    <div class="absolute top-6 right-8 text-6xl font-serif text-primary/10 leading-none">\u201c</div>
                     <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                            <i class="fas fa-user text-primary text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-gray-600 text-sm">Paciente desde 2024</p>
+                        <div class="flex text-yellow-400 text-sm space-x-0.5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p class="text-gray-700 italic">
-                        "Bom dia... Acho que fiquei com receio de criar muitas metas... Então vou de pouco a pouco. Ano
-                        abençoado pra gente! Obrigada por estar presente e me ajudar! 😊❤️"
+                    <p class="text-gray-600 italic text-sm leading-relaxed">
+                        "Acho que fiquei com receio de criar muitas metas... Então vou de pouco a pouco. Ano abençoado pra gente! Obrigada por estar presente e me ajudar! 😊❤️"
                     </p>
+                    <div class="flex items-center justify-between mt-5 pt-4 border-t border-gray-100">
+                        <p class="text-gray-400 text-xs">Paciente desde 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Section -->
+    <section id="trabalho" class="py-20 bg-white transition-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-warm font-semibold text-sm tracking-widest uppercase">Passo a passo</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">Como Funciona Meu Trabalho</h2>
+            </div>
+            <div class="relative">
+                <div class="hidden md:block absolute top-6 left-[10%] right-[10%] h-0.5 bg-primary/20"></div>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-4">
+                    <div class="text-center relative">
+                        <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold relative z-10 shadow-md">1</div>
+                        <h3 class="text-sm font-semibold mb-1.5 text-gray-900">Agende sua sessão</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Envie uma mensagem pelo WhatsApp.</p>
+                    </div>
+                    <div class="text-center relative">
+                        <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold relative z-10 shadow-md">2</div>
+                        <h3 class="text-sm font-semibold mb-1.5 text-gray-900">Avaliação</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Nos conhecemos e entendemos como trabalhar.</p>
+                    </div>
+                    <div class="text-center relative">
+                        <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold relative z-10 shadow-md">3</div>
+                        <h3 class="text-sm font-semibold mb-1.5 text-gray-900">Tratamento</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Te guio pela jornada de autocuidado.</p>
+                    </div>
+                    <div class="text-center relative">
+                        <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold relative z-10 shadow-md">4</div>
+                        <h3 class="text-sm font-semibold mb-1.5 text-gray-900">Planejamento</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Estratégias para manter os resultados.</p>
+                    </div>
+                    <div class="text-center relative col-span-2 md:col-span-1">
+                        <div class="bg-warm text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-lg font-bold relative z-10 shadow-md">5</div>
+                        <h3 class="text-sm font-semibold mb-1.5 text-gray-900">Alta</h3>
+                        <p class="text-gray-500 text-xs leading-relaxed">Você é seu próprio terapeuta!</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Instagram Section -->
-    <section class="py-16 bg-white transition-section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Me acompanhe no <span class="text-primary">instagram</span>!</h2>
-            <a href="https://instagram.com/psi.anniaralima" target="_blank" rel="noopener noreferrer" class="block">
-                <div
-                    class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg p-8 text-white mb-8 hover:from-purple-600 hover:to-pink-600 transition duration-300 cursor-pointer">
-                    <i class="fab fa-instagram text-4xl mb-4"></i>
-                    <h3 class="text-xl font-semibold mb-2">@psi.anniaralima</h3>
-                    <p class="mb-4">Ajudo você a transformar sua vida</p>
-                    <p class="text-sm opacity-90">Terapia baseada em evidências: TCC, DBT e Terapia do Esquema</p>
-                    <p class="text-sm opacity-90">Atendimento online CRP 07/32606</p>
+    <section class="py-20 bg-soft-bg transition-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12 justify-center">
+                <div class="text-center md:text-left max-w-2xl">
+                    <span class="text-warm font-semibold text-sm tracking-widest uppercase">Redes sociais</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2 mb-6">Me Acompanhe no <span class="text-primary">Instagram</span></h2>
+                    <p class="text-gray-600 mb-8 max-w-lg">Conteúdos sobre saúde mental, autocuidado e dicas práticas baseadas em evidências científicas.</p>
+                    <a href="https://instagram.com/psi.anniaralima" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3.5 px-8 rounded-full hover:from-purple-600 hover:to-pink-600 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
+                        <i class="fab fa-instagram text-xl"></i>
+                        @psi.anniaralima
+                    </a>
                 </div>
-            </a>
+            </div>
         </div>
     </section>
 
     <!-- Agendar Section -->
-    <section id="agendar" class="py-16 bg-primary text-white transition-section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Agende sua consulta</h2>
-            <p class="text-xl mb-8">Dê o primeiro passo para transformar sua vida</p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
+    <section id="agendar" class="relative py-20 bg-gradient-to-br from-primary via-primary-dark to-primary_low text-white transition-section overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 right-20 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 left-20 w-48 h-48 bg-warm rounded-full blur-3xl"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Agende sua Consulta</h2>
+            <p class="text-lg md:text-xl mb-10 text-white/80 max-w-2xl mx-auto">Dê o primeiro passo para transformar sua vida. Estou aqui para te acompanhar nessa jornada.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://api.whatsapp.com/send?phone=34678217421&text=Ol%C3%A1!%20Venho%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20terapia."
-                    class="bg-green-500 text-white font-bold py-4 px-8 rounded-full hover:bg-green-600 transition duration-300 inline-flex items-center justify-center">
-                    <i class="fab fa-whatsapp mr-2"></i>
+                    class="bg-green-500 text-white font-bold py-4 px-8 rounded-full hover:bg-green-400 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center hover:-translate-y-1">
+                    <i class="fab fa-whatsapp mr-2 text-xl"></i>
                     Agendar pelo WhatsApp
                 </a>
                 <a href="mailto:anniarallima@gmail.com"
-                    class="bg-white text-primary font-bold py-4 px-8 rounded-full hover:bg-gray-100 transition duration-300 inline-flex items-center justify-center">
+                    class="bg-white/15 backdrop-blur-sm text-white border-2 border-white/30 font-bold py-4 px-8 rounded-full hover:bg-white/25 transition-all duration-300 inline-flex items-center justify-center">
                     <i class="fas fa-envelope mr-2"></i>
                     Enviar e-mail
                 </a>
@@ -447,115 +537,201 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-gray-300">&copy; 2025 Anniara Lima • Todos os direitos reservados</p>
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="font-serif text-xl font-bold mb-4">Anniara Lima</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Psicóloga especialista em TCC, Terapia do Esquema e ACT. Atendimento online bilíngue, seguro e confidencial.</p>
+                    <p class="text-gray-500 text-xs mt-3">CRP: 07/32606</p>
                 </div>
-                <div class="flex space-x-4">
-                    <a href="https://instagram.com/psi.anniaralima" target="_blank" rel="noopener noreferrer"
-                        class="text-gray-300 hover:text-white text-xl" aria-label="Instagram da Psicóloga Anniara Lima">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/anniara-lima" target="_blank" rel="noopener noreferrer"
-                        class="text-gray-300 hover:text-white text-xl">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://api.whatsapp.com/send?phone=34678217421&text=Ol%C3%A1!%20Venho%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20terapia."
-                        target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white text-xl">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+                <div>
+                    <h4 class="font-semibold text-sm tracking-wider uppercase text-gray-300 mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition-colors">Sobre</a></li>
+                        <li><a href="#tratamentos" class="text-gray-400 hover:text-white transition-colors">Tratamentos</a></li>
+                        <li><a href="#beneficios" class="text-gray-400 hover:text-white transition-colors">Benefícios</a></li>
+                        <li><a href="#agendar" class="text-gray-400 hover:text-white transition-colors">Agendar</a></li>
+                    </ul>
                 </div>
+                <div>
+                    <h4 class="font-semibold text-sm tracking-wider uppercase text-gray-300 mb-4">Contato</h4>
+                    <p class="text-gray-400 text-sm mb-3"><i class="fas fa-envelope mr-2 text-primary_low"></i>anniarallima@gmail.com</p>
+                    <div class="flex space-x-3 mt-6">
+                        <a href="https://instagram.com/psi.anniaralima" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/anniara-lima" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=34678217421&text=Ol%C3%A1!%20Venho%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20terapia."
+                            target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-green-500 hover:text-white transition-all duration-300" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">&copy; 2025 Anniara Lima • Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to top button -->
+    <!-- WhatsApp Float Button -->
     <a id="whatsappButton"
         href="https://api.whatsapp.com/send?phone=34678217421&text=Ol%C3%A1!%20Venho%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20terapia."
         target="_blank" rel="noopener noreferrer"
-        class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full shadow-lg hover:bg-green-600 transition duration-300 opacity-0 invisible flex items-center justify-center">
-        <i class="fab fa-whatsapp text-3xl"></i>
+        class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full shadow-lg hover:bg-green-400 hover:shadow-xl transition-all duration-300 opacity-0 invisible flex items-center justify-center hover:-translate-y-1 z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
     </a>
 
     <style>
+        html { scroll-behavior: smooth; }
+
         .transition-section {
             opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(30px);
+            transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         .transition-section.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Nav link underline animation */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #346e77;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after {
+            width: 60%;
+        }
+
+        /* Hero image subtle float */
+        .hero-image {
+            animation: heroFloat 6s ease-in-out infinite;
+        }
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* WhatsApp button pulse */
+        #whatsappButton::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: rgba(34, 197, 94, 0.3);
+            animation: waPulse 2s ease-in-out infinite;
+            z-index: -1;
+        }
+        @keyframes waPulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.3); opacity: 0; }
+        }
     </style>
 
     <script>
-        // Fade-up transition for sections
         document.addEventListener('DOMContentLoaded', function () {
+            // Fade-up sections
             const sections = document.querySelectorAll('.transition-section');
-            const observer = new window.IntersectionObserver((entries, obs) => {
+            const observer = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
                         obs.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.15 });
-            sections.forEach(section => observer.observe(section));
-        });
+            }, { threshold: 0.12 });
+            sections.forEach(s => observer.observe(s));
 
-        // Button visibility functionality
-        const whatsappButton = document.getElementById('whatsappButton');
-        const footer = document.querySelector('footer');
+            // Mobile menu
+            const menuToggle = document.getElementById('menuToggle');
+            const menuClose = document.getElementById('menuClose');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuOverlay = document.getElementById('menuOverlay');
+            const menuPanel = document.getElementById('menuPanel');
 
-        window.addEventListener('scroll', () => {
-            const footerRect = footer.getBoundingClientRect();
-            const isFooterVisible = footerRect.top <= window.innerHeight;
-
-            if (window.pageYOffset > 100 && !isFooterVisible) {
-                whatsappButton.classList.remove('opacity-0', 'invisible');
-                whatsappButton.classList.add('opacity-100', 'visible');
-            } else {
-                whatsappButton.classList.add('opacity-0', 'invisible');
-                whatsappButton.classList.remove('opacity-100', 'visible');
+            function openMenu() {
+                mobileMenu.classList.remove('invisible', 'opacity-0');
+                mobileMenu.classList.add('opacity-100');
+                menuPanel.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
             }
-        });
+            function closeMenu() {
+                menuPanel.classList.add('translate-x-full');
+                mobileMenu.classList.remove('opacity-100');
+                mobileMenu.classList.add('opacity-0');
+                setTimeout(() => {
+                    mobileMenu.classList.add('invisible');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.getAttribute('href') === '#') return;
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+            menuToggle.addEventListener('click', openMenu);
+            menuClose.addEventListener('click', closeMenu);
+            menuOverlay.addEventListener('click', closeMenu);
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            // WhatsApp button visibility
+            const whatsappButton = document.getElementById('whatsappButton');
+            const footer = document.querySelector('footer');
+            window.addEventListener('scroll', () => {
+                const footerRect = footer.getBoundingClientRect();
+                const isFooterVisible = footerRect.top <= window.innerHeight;
+                if (window.pageYOffset > 300 && !isFooterVisible) {
+                    whatsappButton.classList.remove('opacity-0', 'invisible');
+                    whatsappButton.classList.add('opacity-100');
+                } else {
+                    whatsappButton.classList.add('opacity-0', 'invisible');
+                    whatsappButton.classList.remove('opacity-100');
                 }
             });
-        });
 
-        // Testimonial toggle functionality
-        document.querySelectorAll('.testimonial-toggle').forEach(button => {
-            button.addEventListener('click', function () {
-                const testimonialText = this.closest('.bg-white').querySelector('.testimonial-text');
-                const fullText = testimonialText.getAttribute('data-full-text');
-                const isExpanded = this.textContent.trim() === 'Ver menos';
+            // Smooth scroll with offset for sticky header
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.getAttribute('href') === '#') return;
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const offset = 80;
+                        const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
+                });
+            });
 
-                if (!isExpanded) {
-                    // Expand text
-                    testimonialText.textContent = `"${fullText}"`;
-                    this.textContent = 'Ver menos';
-                } else {
-                    // Collapse text
-                    const shortText = fullText.length > 200 ? fullText.substring(0, 200) + '...' : fullText;
-                    testimonialText.textContent = `"${shortText}"`;
-                    this.textContent = 'Ver mais';
-                }
+            // Testimonial toggle
+            document.querySelectorAll('.testimonial-toggle').forEach(button => {
+                button.addEventListener('click', function () {
+                    const card = this.closest('[class*="rounded-3xl"]');
+                    const testimonialText = card.querySelector('.testimonial-text');
+                    const fullText = testimonialText.getAttribute('data-full-text');
+                    const isExpanded = this.textContent.trim() === 'Ver menos';
+                    if (!isExpanded) {
+                        testimonialText.textContent = `"${fullText}"`;
+                        this.textContent = 'Ver menos';
+                    } else {
+                        const shortText = fullText.length > 120 ? fullText.substring(0, 120) + '...' : fullText;
+                        testimonialText.textContent = `"${shortText}"`;
+                        this.textContent = 'Ver mais';
+                    }
+                });
             });
         });
     </script>
