@@ -1,0 +1,95 @@
+# Configuração do Netlify para anniaralima.com
+# Site estático puro: sem build step, o deploy continua sendo git push na main.
+
+[build]
+  publish = "."
+
+# ---------------------------------------------------------------------------
+# 1. Domínio canônico
+#
+# Hoje anniaralima.netlify.app e main--anniaralima.netlify.app respondem 200 e
+# servem o site inteiro, byte a byte igual ao apex. São três URLs com o mesmo
+# conteúdo: o Google pode eleger a .netlify.app como canônica, e crawlers de IA
+# podem citar um domínio que não é a marca dela. O 301 resolve na origem, em vez
+# de depender só da tag canonical no HTML.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "https://anniaralima.netlify.app/*"
+  to = "https://anniaralima.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://anniaralima.netlify.app/*"
+  to = "https://anniaralima.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://main--anniaralima.netlify.app/*"
+  to = "https://anniaralima.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://main--anniaralima.netlify.app/*"
+  to = "https://anniaralima.com/:splat"
+  status = 301
+  force = true
+
+# ---------------------------------------------------------------------------
+# 2. Cabeçalhos
+# ---------------------------------------------------------------------------
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), interest-cohort=()"
+    # O site não carrega mais nada de terceiro: CSS, fontes, ícones e imagens são
+    # todos locais. Por isso dá para proibir origem externa de script.
+    # ATENÇÃO: ao instalar GTM/GA4, incluir aqui googletagmanager.com e
+    # google-analytics.com em script-src/connect-src, senão as tags são bloqueadas.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'"
+
+# Imagens e fontes têm nome estável e conteúdo imutável: podem ser cacheadas por
+# um ano. Hoje elas vêm com max-age=0, must-revalidate — ou seja, revalidação a
+# cada visita, sem nenhum ganho.
+[[headers]]
+  for = "/images/opt/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/static/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/static/opt/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# styles.css NÃO leva hash no nome e muda sempre que uma classe do HTML muda.
+# Fica revalidando (o 304 é barato) para nunca servir CSS velho depois de um deploy.
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ---------------------------------------------------------------------------
+# 3. Deploy previews e branch deploys não devem ser indexados
+# ---------------------------------------------------------------------------
+
+[[context.deploy-preview.headers]]
+  for = "/*"
+  [context.deploy-preview.headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[context.branch-deploy.headers]]
+  for = "/*"
+  [context.branch-deploy.headers.values]
+    X-Robots-Tag = "noindex, nofollow"

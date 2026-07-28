@@ -12,8 +12,9 @@ Este é um site moderno e responsivo desenvolvido com HTML e Tailwind CSS para a
 - **Tailwind CSS**: Utiliza Tailwind CSS para estilização moderna e eficiente
 - **Navegação Suave**: Scroll suave entre seções
 - **Botão "Voltar ao Topo"**: Para melhor experiência do usuário
-- **Ícones Font Awesome**: Para melhor apresentação visual
+- **Ícones SVG locais**: Sprite inline, sem dependência de CDN
 - **SEO Otimizado**: Meta tags e estrutura semântica
+- **Zero terceiros**: CSS, fontes, ícones e imagens são todos servidos do próprio domínio
 
 ## 📱 Seções do Site
 
@@ -38,9 +39,31 @@ Este é um site moderno e responsivo desenvolvido com HTML e Tailwind CSS para a
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica
-- **Tailwind CSS**: Framework CSS utilitário
-- **Font Awesome**: Ícones
+- **Tailwind CSS**: compilado localmente para `styles.css` (não é mais o Play CDN)
+- **Ícones**: sprite SVG inline no início do `<body>`
+- **Fontes**: Playfair Display e Inter self-hosted em `static/fonts/`
 - **JavaScript**: Funcionalidades interativas
+
+## 🔧 Regerar o CSS
+
+`styles.css` é gerado e **versionado no repositório** — o deploy no Netlify continua
+sendo só `git push` na `main`, sem build step. Mas ele precisa ser regerado sempre
+que você **adicionar ou remover uma classe do Tailwind** no `index.html`, senão a
+classe nova não terá estilo:
+
+```bash
+npx tailwindcss@3.4.17 -c tailwind.config.js -i src/input.css -o styles.css --minify
+```
+
+Estilos que não vêm do Tailwind (animações, `.transition-section`, `@font-face`,
+`.icon`) ficam em `src/input.css` — edite lá, não no `styles.css` gerado.
+
+## 🖼️ Imagens
+
+As fotos originais estão em `images/` e as variantes responsivas servidas ao
+visitante em `images/opt/`. O `index.html` referencia só as variantes, via
+`srcset`. Para regerar depois de trocar uma foto, redimensione o original para as
+larguras já usadas (hero e sobre: 480/640/900/1200; trabalho: 384/512/768).
 
 ## 📞 Informações de Contato
 

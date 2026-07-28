@@ -17,7 +17,7 @@
         content="Psicóloga especialista em TCC. Atendimento online. CRP: 07/32606. Agende sua consulta e transforme sua vida.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anniaralima.com">
-    <meta property="og:image" content="https://anniaralima.com/images/IMG_9437.webp">
+    <meta property="og:image" content="https://anniaralima.com/images/opt/hero-1200.webp">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Anniara Lima - Psicóloga | Terapia Cognitivo-Comportamental">
     <meta name="twitter:description" content="Psicóloga especialista em TCC. Atendimento online. CRP: 07/32606.">
@@ -45,42 +45,24 @@
         "https://instagram.com/psi.anniaralima",
         "https://www.linkedin.com/in/anniara-lima"
       ],
-      "image": "https://anniaralima.com/images/IMG_9437.webp"
+      "image": "https://anniaralima.com/images/opt/hero-1200.webp"
     }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#346e77',
-                        'primary-dark': '#2a5960',
-                        secondary: '#d7e1e3',
-                        accent: '#f6f1ea',
-                        primary_low: '#79BAC4',
-                        warm: '#C4956A',
-                        'warm-light': '#E8D5C0',
-                        'soft-bg': '#F8F5F0',
-                        'soft-bg-alt': '#F0EBE3'
-                    },
-                    fontFamily: {
-                        serif: ['Playfair Display', 'Georgia', 'serif'],
-                        sans: ['Inter', 'system-ui', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preload" href="static/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" as="image" fetchpriority="high" href="images/opt/hero-640.webp"
+        imagesrcset="images/opt/hero-480.webp 480w, images/opt/hero-640.webp 640w, images/opt/hero-900.webp 900w, images/opt/hero-1200.webp 1200w"
+        imagesizes="(max-width: 767px) calc(100vw - 2rem), 512px">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/opt/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="static/opt/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="static/opt/icon-512.png">
 </head>
 
 <body class="bg-soft-bg font-sans">
+    <!-- Sprite de ícones (substitui o Font Awesome) -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-bars" viewBox="0 0 448 512"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></symbol><symbol id="i-brain" viewBox="0 0 512 512"><path d="M184 0C214.9 0 240 25.07 240 56V456C240 486.9 214.9 512 184 512C155.1 512 131.3 490.1 128.3 461.9C123.1 463.3 117.6 464 112 464C76.65 464 48 435.3 48 400C48 392.6 49.27 385.4 51.59 378.8C21.43 367.4 0 338.2 0 304C0 272.1 18.71 244.5 45.77 231.7C37.15 220.8 32 206.1 32 192C32 161.3 53.59 135.7 82.41 129.4C80.84 123.9 80 118 80 112C80 82.06 100.6 56.92 128.3 49.93C131.3 21.86 155.1 0 184 0zM383.7 49.93C411.4 56.92 432 82.06 432 112C432 118 431.2 123.9 429.6 129.4C458.4 135.7 480 161.3 480 192C480 206.1 474.9 220.8 466.2 231.7C493.3 244.5 512 272.1 512 304C512 338.2 490.6 367.4 460.4 378.8C462.7 385.4 464 392.6 464 400C464 435.3 435.3 464 400 464C394.4 464 388.9 463.3 383.7 461.9C380.7 490.1 356.9 512 328 512C297.1 512 272 486.9 272 456V56C272 25.07 297.1 0 328 0C356.9 0 380.7 21.86 383.7 49.93z"/></symbol><symbol id="i-bullseye" viewBox="0 0 512 512"><path d="M288 256C288 273.7 273.7 288 256 288C238.3 288 224 273.7 224 256C224 238.3 238.3 224 256 224C273.7 224 288 238.3 288 256zM112 256C112 176.5 176.5 112 256 112C335.5 112 400 176.5 400 256C400 335.5 335.5 400 256 400C176.5 400 112 335.5 112 256zM256 336C300.2 336 336 300.2 336 256C336 211.8 300.2 176 256 176C211.8 176 176 211.8 176 256C176 300.2 211.8 336 256 336zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 64C149.1 64 64 149.1 64 256C64 362 149.1 448 256 448C362 448 448 362 448 256C448 149.1 362 64 256 64z"/></symbol><symbol id="i-chart-line" viewBox="0 0 512 512"><path d="M64 400C64 408.8 71.16 416 80 416H480C497.7 416 512 430.3 512 448C512 465.7 497.7 480 480 480H80C35.82 480 0 444.2 0 400V64C0 46.33 14.33 32 32 32C49.67 32 64 46.33 64 64V400zM342.6 278.6C330.1 291.1 309.9 291.1 297.4 278.6L240 221.3L150.6 310.6C138.1 323.1 117.9 323.1 105.4 310.6C92.88 298.1 92.88 277.9 105.4 265.4L217.4 153.4C229.9 140.9 250.1 140.9 262.6 153.4L320 210.7L425.4 105.4C437.9 92.88 458.1 92.88 470.6 105.4C483.1 117.9 483.1 138.1 470.6 150.6L342.6 278.6z"/></symbol><symbol id="i-check" viewBox="0 0 448 512"><path d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"/></symbol><symbol id="i-clock" viewBox="0 0 512 512"><path d="M256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512zM232 256C232 264 236 271.5 242.7 275.1L338.7 339.1C349.7 347.3 364.6 344.3 371.1 333.3C379.3 322.3 376.3 307.4 365.3 300L280 243.2V120C280 106.7 269.3 96 255.1 96C242.7 96 231.1 106.7 231.1 120L232 256z"/></symbol><symbol id="i-compass" viewBox="0 0 512 512"><path d="M288 256C288 273.7 273.7 288 256 288C238.3 288 224 273.7 224 256C224 238.3 238.3 224 256 224C273.7 224 288 238.3 288 256zM0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM325.1 306.7L380.6 162.4C388.1 142.1 369 123.9 349.6 131.4L205.3 186.9C196.8 190.1 190.1 196.8 186.9 205.3L131.4 349.6C123.9 369 142.1 388.1 162.4 380.6L306.7 325.1C315.2 321.9 321.9 315.2 325.1 306.7V306.7z"/></symbol><symbol id="i-envelope" viewBox="0 0 512 512"><path d="M256 352c-16.53 0-33.06-5.422-47.16-16.41L0 173.2V400C0 426.5 21.49 448 48 448h416c26.51 0 48-21.49 48-48V173.2l-208.8 162.5C289.1 346.6 272.5 352 256 352zM16.29 145.3l212.2 165.1c16.19 12.6 38.87 12.6 55.06 0l212.2-165.1C505.1 137.3 512 125 512 112C512 85.49 490.5 64 464 64h-416C21.49 64 0 85.49 0 112C0 125 6.01 137.3 16.29 145.3z"/></symbol><symbol id="i-globe-americas" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM57.71 192.1L67.07 209.4C75.36 223.9 88.99 234.6 105.1 239.2L162.1 255.7C180.2 260.6 192 276.3 192 294.2V334.1C192 345.1 198.2 355.1 208 359.1C217.8 364.9 224 374.9 224 385.9V424.9C224 440.5 238.9 451.7 253.9 447.4C270.1 442.8 282.5 429.1 286.6 413.7L289.4 402.5C293.6 385.6 304.6 371.1 319.7 362.4L327.8 357.8C342.8 349.3 352 333.4 352 316.1V307.9C352 295.1 346.9 282.9 337.9 273.9L334.1 270.1C325.1 261.1 312.8 255.1 300.1 255.1H256.1C245.9 255.1 234.9 253.1 225.2 247.6L190.7 227.8C186.4 225.4 183.1 221.4 181.6 216.7C178.4 207.1 182.7 196.7 191.7 192.1L197.7 189.2C204.3 185.9 211.9 185.3 218.1 187.7L242.2 195.4C250.3 198.1 259.3 195 264.1 187.9C268.8 180.8 268.3 171.5 262.9 165L249.3 148.8C239.3 136.8 239.4 119.3 249.6 107.5L265.3 89.12C274.1 78.85 275.5 64.16 268.8 52.42L266.4 48.26C262.1 48.09 259.5 48 256 48C163.1 48 84.4 108.9 57.71 192.1L57.71 192.1zM437.6 154.5L412 164.8C396.3 171.1 388.2 188.5 393.5 204.6L410.4 255.3C413.9 265.7 422.4 273.6 433 276.3L462.2 283.5C463.4 274.5 464 265.3 464 256C464 219.2 454.4 184.6 437.6 154.5H437.6z"/></symbol><symbol id="i-hand-holding-heart" viewBox="0 0 576 512"><path d="M275.2 250.5c7 7.375 18.5 7.375 25.5 0l108.1-114.2c31.5-33.12 29.72-88.1-5.65-118.7c-30.88-26.75-76.75-21.9-104.9 7.724L287.1 36.91L276.8 25.28C248.7-4.345 202.7-9.194 171.1 17.56C136.7 48.18 134.7 103.2 166.4 136.3L275.2 250.5zM568.2 336.3c-13.12-17.81-38.14-21.66-55.93-8.469l-119.7 88.17h-120.6c-8.748 0-15.1-7.25-15.1-15.1c0-8.746 7.25-15.1 15.1-15.1h78.25c15.1 0 30.75-10.87 33.37-26.62c3.25-19.1-12.12-37.37-31.62-37.37H191.1c-26.1 0-53.12 9.25-74.12 26.25l-46.5 37.74l-55.37-.0253c-8.748 0-15.1 7.275-15.1 16.02L.0001 496C.0001 504.8 7.251 512 15.1 512h346.1c22.03 0 43.92-7.187 61.7-20.28l135.1-99.51C577.5 379.1 581.3 354.1 568.2 336.3z"/></symbol><symbol id="i-heart" viewBox="0 0 512 512"><path d="M0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L256 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 .0003 232.4 .0003 190.9L0 190.9z"/></symbol><symbol id="i-instagram" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></symbol><symbol id="i-linkedin-in" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></symbol><symbol id="i-medal" viewBox="0 0 512 512"><path d="M223.7 130.8L149.1 7.77C147.1 2.949 141.9 0 136.3 0H16.03c-12.95 0-20.53 14.58-13.1 25.18l111.3 158.9C143.9 156.4 181.7 137.3 223.7 130.8zM256 160c-97.25 0-176 78.75-176 176S158.8 512 256 512s176-78.75 176-176S353.3 160 256 160zM348.5 317.3l-37.88 37l8.875 52.25c1.625 9.25-8.25 16.5-16.63 12l-46.88-24.62L209.1 418.5c-8.375 4.5-18.25-2.75-16.63-12l8.875-52.25l-37.88-37C156.6 310.6 160.5 299 169.9 297.6l52.38-7.625L245.7 242.5c2-4.25 6.125-6.375 10.25-6.375S264.2 238.3 266.2 242.5l23.5 47.5l52.38 7.625C351.6 299 355.4 310.6 348.5 317.3zM495.1 0H375.7c-5.621 0-10.83 2.949-13.72 7.77l-73.76 122.1c42 6.5 79.88 25.62 109.5 53.38l111.3-158.9C516.5 14.58 508.9 0 495.1 0z"/></symbol><symbol id="i-puzzle-piece" viewBox="0 0 512 512"><path d="M512 288c0 35.35-21.49 64-48 64c-32.43 0-31.72-32-55.64-32C394.9 320 384 330.9 384 344.4V480c0 17.67-14.33 32-32 32h-71.64C266.9 512 256 501.1 256 487.6C256 463.1 288 464.4 288 432c0-26.51-28.65-48-64-48s-64 21.49-64 48c0 32.43 32 31.72 32 55.64C192 501.1 181.1 512 167.6 512H32c-17.67 0-32-14.33-32-32v-135.6C0 330.9 10.91 320 24.36 320C48.05 320 47.6 352 80 352C106.5 352 128 323.3 128 288S106.5 223.1 80 223.1c-32.43 0-31.72 32-55.64 32C10.91 255.1 0 245.1 0 231.6v-71.64c0-17.67 14.33-31.1 32-31.1h135.6C181.1 127.1 192 117.1 192 103.6c0-23.69-32-23.24-32-55.64c0-26.51 28.65-47.1 64-47.1s64 21.49 64 47.1c0 32.43-32 31.72-32 55.64c0 13.45 10.91 24.36 24.36 24.36H352c17.67 0 32 14.33 32 31.1v71.64c0 13.45 10.91 24.36 24.36 24.36c23.69 0 23.24-32 55.64-32C490.5 223.1 512 252.7 512 288z"/></symbol><symbol id="i-search" viewBox="0 0 512 512"><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></symbol><symbol id="i-shield-alt" viewBox="0 0 512 512"><path d="M496 127.1C496 381.3 309.1 512 255.1 512C204.9 512 16 385.3 16 127.1c0-19.41 11.7-36.89 29.61-44.28l191.1-80.01c4.906-2.031 13.13-3.701 18.44-3.701c5.281 0 13.58 1.67 18.46 3.701l192 80.01C484.3 91.1 496 108.6 496 127.1z"/></symbol><symbol id="i-star" viewBox="0 0 576 512"><path d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></symbol><symbol id="i-times" viewBox="0 0 320 512"><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></symbol><symbol id="i-user-md" viewBox="0 0 448 512"><path d="M352 128C352 198.7 294.7 256 223.1 256C153.3 256 95.1 198.7 95.1 128C95.1 57.31 153.3 0 223.1 0C294.7 0 352 57.31 352 128zM287.1 362C260.4 369.1 239.1 394.2 239.1 424V448C239.1 452.2 241.7 456.3 244.7 459.3L260.7 475.3C266.9 481.6 277.1 481.6 283.3 475.3C289.6 469.1 289.6 458.9 283.3 452.7L271.1 441.4V424C271.1 406.3 286.3 392 303.1 392C321.7 392 336 406.3 336 424V441.4L324.7 452.7C318.4 458.9 318.4 469.1 324.7 475.3C330.9 481.6 341.1 481.6 347.3 475.3L363.3 459.3C366.3 456.3 368 452.2 368 448V424C368 394.2 347.6 369.1 320 362V308.8C393.5 326.7 448 392.1 448 472V480C448 497.7 433.7 512 416 512H32C14.33 512 0 497.7 0 480V472C0 393 54.53 326.7 128 308.8V370.3C104.9 377.2 88 398.6 88 424C88 454.9 113.1 480 144 480C174.9 480 200 454.9 200 424C200 398.6 183.1 377.2 160 370.3V304.2C162.7 304.1 165.3 304 168 304H280C282.7 304 285.3 304.1 288 304.2L287.1 362zM167.1 424C167.1 437.3 157.3 448 143.1 448C130.7 448 119.1 437.3 119.1 424C119.1 410.7 130.7 400 143.1 400C157.3 400 167.1 410.7 167.1 424z"/></symbol><symbol id="i-whatsapp" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></symbol><symbol id="i-wind" viewBox="0 0 512 512"><path d="M32 192h320c52.94 0 96-43.06 96-96s-43.06-96-96-96h-32c-17.69 0-32 14.31-32 32s14.31 32 32 32h32c17.66 0 32 14.34 32 32s-14.34 32-32 32H32C14.31 128 0 142.3 0 160S14.31 192 32 192zM160 320H32c-17.69 0-32 14.31-32 32s14.31 32 32 32h128c17.66 0 32 14.34 32 32s-14.34 32-32 32H128c-17.69 0-32 14.31-32 32s14.31 32 32 32h32c52.94 0 96-43.06 96-96S212.9 320 160 320zM416 224H32C14.31 224 0 238.3 0 256s14.31 32 32 32h384c17.66 0 32 14.34 32 32s-14.34 32-32 32h-32c-17.69 0-32 14.31-32 32s14.31 32 32 32h32c52.94 0 96-43.06 96-96S468.9 224 416 224z"/></symbol></svg>
+
     <!-- Header -->
     <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 transition-all duration-300">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,7 +89,7 @@
                 </div>
                 <div class="md:hidden">
                     <button id="menuToggle" class="text-gray-700 hover:text-primary p-2" aria-label="Abrir menu">
-                        <i class="fas fa-bars text-xl"></i>
+                        <svg class="icon text-xl" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-bars"></use></svg>
                     </button>
                 </div>
             </div>
@@ -122,7 +104,7 @@
             <div class="flex justify-between items-center p-6 border-b border-gray-100">
                 <span class="font-serif font-bold text-primary text-lg">Menu</span>
                 <button id="menuClose" class="text-gray-500 hover:text-primary p-2" aria-label="Fechar menu">
-                    <i class="fas fa-times text-xl"></i>
+                    <svg class="icon text-xl" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><use href="#i-times"></use></svg>
                 </button>
             </div>
             <div class="flex flex-col p-6 space-y-2">
@@ -156,7 +138,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col md:flex-row items-center justify-center gap-12">
                 <div class="md:w-5/12 flex justify-center">
-                    <img src="images/IMG_9437.webp"
+                    <img src="images/opt/hero-640.webp"
+                        srcset="images/opt/hero-480.webp 480w, images/opt/hero-640.webp 640w, images/opt/hero-900.webp 900w, images/opt/hero-1200.webp 1200w"
+                        sizes="(max-width: 767px) calc(100vw - 2rem), 512px"
+                        width="640" height="814" fetchpriority="high" decoding="async"
                         alt="Psicóloga Anniara Lima - Especialista em Terapia Cognitivo-Comportamental"
                         class="rounded-3xl shadow-2xl w-full max-w-lg h-auto object-cover border-4 border-white/20 hero-image" />
                 </div>
@@ -201,8 +186,7 @@
                     class="feature-card text-center p-6 rounded-2xl hover:bg-soft-bg transition-all duration-300 cursor-default group">
                     <div
                         class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                        <i
-                            class="fas fa-shield-alt text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                        <svg class="icon text-2xl text-primary group-hover:text-white transition-colors duration-300" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-shield-alt"></use></svg>
                     </div>
                     <h3 class="text-base font-semibold text-gray-800">Ambiente seguro</h3>
                 </div>
@@ -210,8 +194,7 @@
                     class="feature-card text-center p-6 rounded-2xl hover:bg-soft-bg transition-all duration-300 cursor-default group">
                     <div
                         class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                        <i
-                            class="fas fa-user-md text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                        <svg class="icon text-2xl text-primary group-hover:text-white transition-colors duration-300" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-user-md"></use></svg>
                     </div>
                     <h3 class="text-base font-semibold text-gray-800">Suporte Profissional</h3>
                 </div>
@@ -219,8 +202,7 @@
                     class="feature-card text-center p-6 rounded-2xl hover:bg-soft-bg transition-all duration-300 cursor-default group">
                     <div
                         class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                        <i
-                            class="fas fa-bullseye text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                        <svg class="icon text-2xl text-primary group-hover:text-white transition-colors duration-300" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-bullseye"></use></svg>
                     </div>
                     <h3 class="text-base font-semibold text-gray-800">Foco em mudanças práticas</h3>
                 </div>
@@ -228,8 +210,7 @@
                     class="feature-card text-center p-6 rounded-2xl hover:bg-soft-bg transition-all duration-300 cursor-default group">
                     <div
                         class="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                        <i
-                            class="fas fa-clock text-2xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                        <svg class="icon text-2xl text-primary group-hover:text-white transition-colors duration-300" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-clock"></use></svg>
                     </div>
                     <h3 class="text-base font-semibold text-gray-800">Horários flexíveis</h3>
                 </div>
@@ -251,8 +232,7 @@
                     <div class="flex items-center gap-4 mb-5">
                         <div
                             class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-300">
-                            <i
-                                class="fas fa-compass text-xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                            <svg class="icon text-xl text-primary group-hover:text-white transition-colors duration-300" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-compass"></use></svg>
                         </div>
                         <h3 class="font-serif text-xl font-bold text-gray-900 leading-tight">Pessoas reflexivas</h3>
                     </div>
@@ -266,8 +246,7 @@
                     <div class="flex items-center gap-4 mb-5">
                         <div
                             class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-300">
-                            <i
-                                class="fas fa-hand-holding-heart text-xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                            <svg class="icon text-xl text-primary group-hover:text-white transition-colors duration-300" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-hand-holding-heart"></use></svg>
                         </div>
                         <h3 class="font-serif text-xl font-bold text-gray-900 leading-tight">Quem se auto-sacrifica</h3>
                     </div>
@@ -281,8 +260,7 @@
                     <div class="flex items-center gap-4 mb-5">
                         <div
                             class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-300">
-                            <i
-                                class="fas fa-wind text-xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                            <svg class="icon text-xl text-primary group-hover:text-white transition-colors duration-300" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-wind"></use></svg>
                         </div>
                         <h3 class="font-serif text-xl font-bold text-gray-900 leading-tight">Quem vive no caos emocional
                         </h3>
@@ -329,7 +307,7 @@
                         <div class="flex items-start gap-3">
                             <div
                                 class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="fas fa-search text-primary text-sm"></i>
+                                <svg class="icon text-primary text-sm" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg>
                             </div>
                             <div>
                                 <p class="text-sm font-semibold text-gray-900">Avaliação diagnóstica</p>
@@ -339,7 +317,7 @@
                         <div class="flex items-start gap-3">
                             <div
                                 class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="fas fa-puzzle-piece text-primary text-sm"></i>
+                                <svg class="icon text-primary text-sm" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-puzzle-piece"></use></svg>
                             </div>
                             <div>
                                 <p class="text-sm font-semibold text-gray-900">Padrões ocultos</p>
@@ -349,7 +327,7 @@
                         <div class="flex items-start gap-3">
                             <div
                                 class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="fas fa-globe-americas text-primary text-sm"></i>
+                                <svg class="icon text-primary text-sm" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-globe-americas"></use></svg>
                             </div>
                             <div>
                                 <p class="text-sm font-semibold text-gray-900">Bilíngue</p>
@@ -359,7 +337,7 @@
                         <div class="flex items-start gap-3">
                             <div
                                 class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="fas fa-medal text-primary text-sm"></i>
+                                <svg class="icon text-primary text-sm" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-medal"></use></svg>
                             </div>
                             <div>
                                 <p class="text-sm font-semibold text-gray-900">Especialista em Saúde</p>
@@ -370,11 +348,15 @@
                 </div>
                 <div class="flex justify-center order-1 md:order-2">
                     <div class="relative">
-                        <img src="images/IMG_9519-1.webp" alt="Psicóloga Anniara Lima"
-                            class="rounded-3xl w-full max-w-sm h-auto object-cover shadow-xl" />
+                        <img src="images/opt/trabalho-512.webp"
+                        srcset="images/opt/trabalho-384.webp 384w, images/opt/trabalho-512.webp 512w, images/opt/trabalho-768.webp 768w"
+                        sizes="(max-width: 767px) calc(100vw - 2rem), 384px"
+                        width="512" height="512" loading="lazy" decoding="async"
+                        alt="Psicóloga Anniara Lima"
+                        class="rounded-3xl w-full max-w-sm h-auto object-cover shadow-xl" />
                         <div
                             class="absolute -bottom-4 -left-4 bg-warm text-white rounded-2xl py-3 px-5 shadow-lg hidden md:block">
-                            <p class="text-sm font-semibold"><i class="fas fa-heart mr-1.5"></i>Dedicação &amp; cuidado
+                            <p class="text-sm font-semibold"><svg class="icon mr-1.5" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-heart"></use></svg>Dedicação &amp; cuidado
                             </p>
                         </div>
                     </div>
@@ -388,7 +370,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="relative">
-                    <img src="images/IMG_9537.webp" alt="Psicóloga Anniara Lima - Especialista em TCC e Saúde Mental"
+                    <img src="images/opt/sobre-640.webp"
+                        srcset="images/opt/sobre-480.webp 480w, images/opt/sobre-640.webp 640w, images/opt/sobre-900.webp 900w, images/opt/sobre-1200.webp 1200w"
+                        sizes="(max-width: 767px) calc(100vw - 2rem), 512px"
+                        width="640" height="960" loading="lazy" decoding="async"
+                        alt="Psicóloga Anniara Lima - Especialista em TCC e Saúde Mental"
                         class="rounded-3xl w-full max-w-lg h-auto object-cover shadow-xl mx-auto" />
                     <div
                         class="absolute -bottom-6 -right-6 bg-primary text-white rounded-2xl p-5 shadow-lg hidden md:block">
@@ -448,8 +434,7 @@
                     <div class="flex items-center gap-4 mb-5">
                         <div
                             class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-300">
-                            <i
-                                class="fas fa-brain text-xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                            <svg class="icon text-xl text-primary group-hover:text-white transition-colors duration-300" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-brain"></use></svg>
                         </div>
                         <h3 class="font-serif text-xl font-bold text-gray-900 leading-tight">Ansiedade e Regulação
                             Emocional</h3>
@@ -459,11 +444,11 @@
                         para gerenciar os sintomas.
                     </p>
                     <ul class="space-y-2 text-sm text-gray-500">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Estratégias
+                        <li class="flex items-center gap-2"><svg class="icon text-primary text-xs" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Estratégias
                             de autocuidado</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Gestão de
+                        <li class="flex items-center gap-2"><svg class="icon text-primary text-xs" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Gestão de
                             gatilhos emocionais</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Regulação
+                        <li class="flex items-center gap-2"><svg class="icon text-primary text-xs" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Regulação
                             emocional</li>
                     </ul>
                 </div>
@@ -472,8 +457,7 @@
                     <div class="flex items-center gap-4 mb-5">
                         <div
                             class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-300">
-                            <i
-                                class="fas fa-heart text-xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                            <svg class="icon text-xl text-primary group-hover:text-white transition-colors duration-300" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-heart"></use></svg>
                         </div>
                         <h3 class="font-serif text-xl font-bold text-gray-900 leading-tight">Relacionamentos e Limites
                         </h3>
@@ -483,11 +467,11 @@
                         recursos emocionais.
                     </p>
                     <ul class="space-y-2 text-sm text-gray-500">
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Limites
+                        <li class="flex items-center gap-2"><svg class="icon text-primary text-xs" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Limites
                             saudáveis sem culpa</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Comunicação
+                        <li class="flex items-center gap-2"><svg class="icon text-primary text-xs" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Comunicação
                             assertiva</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Adaptação a
+                        <li class="flex items-center gap-2"><svg class="icon text-primary text-xs" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Adaptação a
                             mudanças</li>
                     </ul>
                 </div>
@@ -496,8 +480,7 @@
                     <div class="flex items-center gap-4 mb-5">
                         <div
                             class="bg-primary/10 w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-all duration-300">
-                            <i
-                                class="fas fa-chart-line text-xl text-primary group-hover:text-white transition-colors duration-300"></i>
+                            <svg class="icon text-xl text-primary group-hover:text-white transition-colors duration-300" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-chart-line"></use></svg>
                         </div>
                         <h3 class="font-serif text-xl font-bold text-gray-900 leading-tight">Autoconhecimento e
                             Crescimento</h3>
@@ -507,11 +490,10 @@
                         e seus objetivos de vida.
                     </p>
                     <ul class="space-y-2 text-sm text-gray-500">
-                        <li class="flex items-center gap-2"><i
-                                class="fas fa-check text-primary text-xs"></i>Empoderamento financeiro</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Propósito e
+                        <li class="flex items-center gap-2"><svg class="icon text-primary text-xs" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Empoderamento financeiro</li>
+                        <li class="flex items-center gap-2"><svg class="icon text-primary text-xs" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Propósito e
                             direção de vida</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-check text-primary text-xs"></i>Autonomia
+                        <li class="flex items-center gap-2"><svg class="icon text-primary text-xs" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>Autonomia
                             emocional</li>
                     </ul>
                 </div>
@@ -531,8 +513,7 @@
                     <div class="absolute top-6 right-8 text-6xl font-serif text-primary/10 leading-none">\u201c</div>
                     <div class="flex items-center mb-4">
                         <div class="flex text-yellow-400 text-sm space-x-0.5">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg>
                         </div>
                     </div>
                     <p class="text-gray-600 italic text-sm leading-relaxed testimonial-text"
@@ -551,8 +532,7 @@
                     <div class="absolute top-6 right-8 text-6xl font-serif text-primary/10 leading-none">\u201c</div>
                     <div class="flex items-center mb-4">
                         <div class="flex text-yellow-400 text-sm space-x-0.5">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg>
                         </div>
                     </div>
                     <p class="text-gray-600 italic text-sm leading-relaxed testimonial-text"
@@ -571,8 +551,7 @@
                     <div class="absolute top-6 right-8 text-6xl font-serif text-primary/10 leading-none">\u201c</div>
                     <div class="flex items-center mb-4">
                         <div class="flex text-yellow-400 text-sm space-x-0.5">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg><svg class="icon" viewBox="0 0 576 512" aria-hidden="true" focusable="false"><use href="#i-star"></use></svg>
                         </div>
                     </div>
                     <p class="text-gray-600 italic text-sm leading-relaxed">
@@ -659,7 +638,7 @@
                         baseadas em evidências científicas.</p>
                     <a href="https://instagram.com/psi.anniaralima" target="_blank" rel="noopener noreferrer"
                         class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3.5 px-8 rounded-full hover:from-purple-600 hover:to-pink-600 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
-                        <i class="fab fa-instagram text-xl"></i>
+                        <svg class="icon text-xl" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-instagram"></use></svg>
                         @psi.anniaralima
                     </a>
                 </div>
@@ -681,12 +660,12 @@
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://api.whatsapp.com/send?phone=34678217421&text=Ol%C3%A1!%20Venho%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20terapia."
                     class="bg-green-500 text-white font-bold py-4 px-8 rounded-full hover:bg-green-400 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center hover:-translate-y-1">
-                    <i class="fab fa-whatsapp mr-2 text-xl"></i>
+                    <svg class="icon mr-2 text-xl" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
                     Agendar pelo WhatsApp
                 </a>
                 <!-- <a href="mailto:anniarallima@gmail.com"
                     class="bg-white/15 backdrop-blur-sm text-white border-2 border-white/30 font-bold py-4 px-8 rounded-full hover:bg-white/25 transition-all duration-300 inline-flex items-center justify-center">
-                    <i class="fas fa-envelope mr-2"></i>
+                    <svg class="icon mr-2" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-envelope"></use></svg>
                     Enviar e-mail
                 </a> -->
             </div>
@@ -718,24 +697,23 @@
                 </div>
                 <div>
                     <h4 class="font-semibold text-sm tracking-wider uppercase text-gray-900 mb-4">Contato</h4>
-                    <p class="text-gray-600 text-sm mb-3"><i
-                            class="fas fa-envelope mr-2 text-primary"></i>anniarallima@gmail.com</p>
+                    <p class="text-gray-600 text-sm mb-3"><svg class="icon mr-2 text-primary" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-envelope"></use></svg>anniarallima@gmail.com</p>
                     <div class="flex space-x-3 mt-6">
                         <a href="https://instagram.com/psi.anniaralima" target="_blank" rel="noopener noreferrer"
                             class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300"
                             aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
+                            <svg class="icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-instagram"></use></svg>
                         </a>
                         <a href="https://www.linkedin.com/in/anniara-lima" target="_blank" rel="noopener noreferrer"
                             class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300"
                             aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
+                            <svg class="icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-linkedin-in"></use></svg>
                         </a>
                         <a href="https://api.whatsapp.com/send?phone=34678217421&text=Ol%C3%A1!%20Venho%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20terapia."
                             target="_blank" rel="noopener noreferrer"
                             class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all duration-300"
                             aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
+                            <svg class="icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
                         </a>
                     </div>
                 </div>
@@ -751,84 +729,9 @@
         href="https://api.whatsapp.com/send?phone=34678217421&text=Ol%C3%A1!%20Venho%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20terapia."
         target="_blank" rel="noopener noreferrer"
         class="fixed bottom-8 right-8 bg-green-500 text-white w-14 h-14 rounded-full shadow-lg hover:bg-green-400 hover:shadow-xl transition-all duration-300 opacity-0 invisible flex items-center justify-center hover:-translate-y-1 z-50">
-        <i class="fab fa-whatsapp text-2xl"></i>
+        <svg class="icon text-2xl" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
     </a>
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .transition-section {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .transition-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Nav link underline animation */
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: #346e77;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-link:hover::after {
-            width: 60%;
-        }
-
-        /* Hero image subtle float */
-        .hero-image {
-            animation: heroFloat 6s ease-in-out infinite;
-        }
-
-        @keyframes heroFloat {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-8px);
-            }
-        }
-
-        /* WhatsApp button pulse */
-        #whatsappButton::before {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            border-radius: 50%;
-            background: rgba(34, 197, 94, 0.3);
-            animation: waPulse 2s ease-in-out infinite;
-            z-index: -1;
-        }
-
-        @keyframes waPulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-                opacity: 0.5;
-            }
-
-            50% {
-                transform: scale(1.3);
-                opacity: 0;
-            }
-        }
-    </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
