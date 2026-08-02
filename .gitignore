@@ -1,3 +1,11 @@
+# Documentos internos — NÃO commitar.
+# O Netlify publica tudo que está no repositório: se estes forem commitados,
+# ficam acessíveis em anniaralima.com/<arquivo>. Eles tratam de compliance,
+# sigilo de pacientes e decisões internas. Ignorados = nunca chegam ao deploy.
+TODO*.md
+*-TODO.md
+auditoria-*.md
+
 # Dependencies
 node_modules/
 npm-debug.log*
