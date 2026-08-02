@@ -67,27 +67,248 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Anniara Lima - Psicóloga",
-      "description": "Psicóloga especialista em TCC, Terapia do Esquema e ACT. Atendimento online bilíngue para adultos.",
-      "url": "https://anniaralima.com",
-      "telephone": "+34678217421",
-      "email": "anniarallima@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "BR"
-      },
-      "medicalSpecialty": "Psicologia",
-      "availableService": [
-        {"@type": "MedicalTherapy", "name": "Terapia Cognitivo-Comportamental"},
-        {"@type": "MedicalTherapy", "name": "Terapia do Esquema"},
-        {"@type": "MedicalTherapy", "name": "Terapia de Aceitação e Compromisso (ACT)"}
-      ],
-      "sameAs": [
-        "https://instagram.com/psi.anniaralima",
-        "https://www.linkedin.com/in/anniara-lima"
-      ],
-      "image": "https://anniaralima.com/images/opt/hero-1200.webp"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://anniaralima.com/#website",
+          "url": "https://anniaralima.com/",
+          "name": "Anniara Lima — Psicóloga",
+          "inLanguage": "pt-BR",
+          "publisher": {
+            "@id": "https://anniaralima.com/#pratica"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://anniaralima.com/#webpage",
+          "url": "https://anniaralima.com/",
+          "name": "Anniara Lima - Psicóloga | Terapia Cognitivo-Comportamental",
+          "description": "Psicóloga brasileira (CRP 07/32606) com atendimento online em TCC, Terapia do Esquema e ACT. Sessões em português e inglês.",
+          "inLanguage": "pt-BR",
+          "isPartOf": {
+            "@id": "https://anniaralima.com/#website"
+          },
+          "about": {
+            "@id": "https://anniaralima.com/#anniara"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://anniaralima.com/images/opt/hero-1200.webp"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://anniaralima.com/#anniara",
+          "name": "Anniara Lucia Dornelles de Lima",
+          "alternateName": "Anniara Lima",
+          "givenName": "Anniara",
+          "familyName": "Dornelles de Lima",
+          "jobTitle": "Psicóloga",
+          "description": "Psicóloga brasileira registrada no CRP 07/32606, com atendimento clínico online em português e inglês. Trabalha com Terapia Cognitivo-Comportamental, Terapia do Esquema e Terapia de Aceitação e Compromisso.",
+          "url": "https://anniaralima.com/",
+          "image": "https://anniaralima.com/images/opt/hero-1200.webp",
+          "email": "anniarallima@gmail.com",
+          "nationality": {
+            "@type": "Country",
+            "name": "Brasil"
+          },
+          "knowsLanguage": [
+            {
+              "@type": "Language",
+              "name": "Português"
+            },
+            {
+              "@type": "Language",
+              "name": "Inglês"
+            }
+          ],
+          "knowsAbout": [
+            "Terapia Cognitivo-Comportamental",
+            "Terapia do Esquema",
+            "Terapia de Aceitação e Compromisso",
+            "Psicologia Hospitalar",
+            "Ansiedade",
+            "Regulação emocional",
+            "Psicopatologia"
+          ],
+          "identifier": {
+            "@type": "PropertyValue",
+            "propertyID": "CRP",
+            "name": "Registro no Conselho Regional de Psicologia",
+            "value": "07/32606"
+          },
+          "memberOf": {
+            "@type": "Organization",
+            "name": "Conselho Regional de Psicologia do Rio Grande do Sul (CRP-07)"
+          },
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Bacharelado em Psicologia",
+              "credentialCategory": "Graduação",
+              "recognizedBy": {
+                "@type": "CollegeOrUniversity",
+                "name": "Universidade Federal de Santa Maria (UFSM)"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Residência Multiprofissional em Intensivismo, Urgência e Emergência",
+              "credentialCategory": "Residência",
+              "recognizedBy": {
+                "@type": "CollegeOrUniversity",
+                "name": "Universidade de Santa Cruz do Sul (UNISC)"
+              }
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Especialista em Psicologia Hospitalar",
+              "credentialCategory": "Título de especialista",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "Conselho Federal de Psicologia (CFP)",
+                "url": "https://site.cfp.org.br/"
+              }
+            }
+          ],
+          "alumniOf": [
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Universidade Federal de Santa Maria (UFSM)"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Universidade de Santa Cruz do Sul (UNISC)"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Universidad de Granada"
+            }
+          ],
+          "worksFor": {
+            "@id": "https://anniaralima.com/#pratica"
+          },
+          "sameAs": [
+            "https://instagram.com/psi.anniaralima",
+            "https://www.linkedin.com/in/anniara-lima"
+          ]
+        },
+        {
+          "@type": "MedicalOrganization",
+          "@id": "https://anniaralima.com/#pratica",
+          "name": "Anniara Lima — Psicologia Clínica Online",
+          "description": "Atendimento psicológico clínico online, em português e inglês, para adultos em qualquer lugar do mundo.",
+          "url": "https://anniaralima.com/",
+          "email": "anniarallima@gmail.com",
+          "telephone": "+34678217421",
+          "image": "https://anniaralima.com/images/opt/hero-1200.webp",
+          "founder": {
+            "@id": "https://anniaralima.com/#anniara"
+          },
+          "employee": {
+            "@id": "https://anniaralima.com/#anniara"
+          },
+          "knowsLanguage": [
+            {
+              "@type": "Language",
+              "name": "Português"
+            },
+            {
+              "@type": "Language",
+              "name": "Inglês"
+            }
+          ],
+          "areaServed": {
+            "@type": "Country",
+            "name": "Brasil"
+          },
+          "sameAs": [
+            "https://instagram.com/psi.anniaralima",
+            "https://www.linkedin.com/in/anniara-lima"
+          ]
+        },
+        {
+          "@type": "Service",
+          "@id": "https://anniaralima.com/#servico-tcc",
+          "name": "Terapia Cognitivo-Comportamental online",
+          "serviceType": "Terapia Cognitivo-Comportamental",
+          "provider": {
+            "@id": "https://anniaralima.com/#pratica"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Brasil"
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://anniaralima.com/#agendar",
+            "availableLanguage": [
+              {
+                "@type": "Language",
+                "name": "Português"
+              },
+              {
+                "@type": "Language",
+                "name": "Inglês"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://anniaralima.com/#servico-esquema",
+          "name": "Terapia do Esquema online",
+          "serviceType": "Terapia do Esquema",
+          "provider": {
+            "@id": "https://anniaralima.com/#pratica"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Brasil"
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://anniaralima.com/#agendar",
+            "availableLanguage": [
+              {
+                "@type": "Language",
+                "name": "Português"
+              },
+              {
+                "@type": "Language",
+                "name": "Inglês"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://anniaralima.com/#servico-act",
+          "name": "Terapia de Aceitação e Compromisso online",
+          "serviceType": "Terapia de Aceitação e Compromisso",
+          "provider": {
+            "@id": "https://anniaralima.com/#pratica"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Brasil"
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://anniaralima.com/#agendar",
+            "availableLanguage": [
+              {
+                "@type": "Language",
+                "name": "Português"
+              },
+              {
+                "@type": "Language",
+                "name": "Inglês"
+              }
+            ]
+          }
+        }
+      ]
     }
     </script>
     <link rel="preload" href="static/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
