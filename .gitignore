@@ -5,6 +5,7 @@
 TODO*.md
 *-TODO.md
 auditoria-*.md
+PERGUNTAS-*.md
 
 # Dependencies
 node_modules/
