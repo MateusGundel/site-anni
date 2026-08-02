@@ -920,6 +920,14 @@
                         ad_personalization: 'granted',
                         analytics_storage: 'granted'
                     });
+                    // A tag do GA4 está em "Initialization - All Pages", que já
+                    // passou e foi bloqueada pelo consentimento negado. O GTM não
+                    // re-dispara acionador de inicialização quando o consentimento
+                    // muda, então sem este empurrão a visita em que a pessoa
+                    // aceitou ficaria sem page_view — e num site de página única
+                    // não existe navegação seguinte para corrigir isso.
+                    // No GTM, adicionar este evento como acionador extra da tag do GA4.
+                    dataLayer.push({ event: 'consentimento_aceito' });
                 }
                 banner.classList.add('hidden');
             }
