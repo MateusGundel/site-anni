@@ -128,7 +128,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section id="home"
+    <section data-section="home" id="home"
         class="relative bg-gradient-to-b from-primary from-0% via-primary-dark via-90% to-primary_low to-100% text-white pt-16 md:pt-24 pb-32 md:pb-40 transition-section overflow-hidden">
         <div class="absolute inset-0 opacity-10">
             <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
@@ -178,7 +178,7 @@
     </section>
 
     <!-- Features Section -->
-    <section id="beneficios" class="py-20 bg-white transition-section">
+    <section data-section="beneficios" id="beneficios" class="py-20 bg-white transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Título só para leitor de tela e para máquinas: a seção era um salto de h1 para h3 -->
             <h2 class="sr-only">Diferenciais do atendimento</h2>
@@ -220,7 +220,7 @@
     </section>
 
     <!-- Quem eu Atendo Section -->
-    <section class="py-20 bg-soft-bg transition-section">
+    <section data-section="quem_atendo" class="py-20 bg-soft-bg transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">Quem eu atendo</h2>
@@ -276,7 +276,7 @@
     </section>
 
     <!-- Como eu Ajudo Section -->
-    <section class="py-20 bg-white transition-section">
+    <section data-section="como_ajudo" class="py-20 bg-white transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="order-2 md:order-1">
@@ -367,7 +367,7 @@
     </section>
 
     <!-- Sobre Section -->
-    <section id="sobre" class="py-20 bg-soft-bg transition-section">
+    <section data-section="sobre" id="sobre" class="py-20 bg-soft-bg transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="relative">
@@ -422,7 +422,7 @@
     </section>
 
     <!-- Tratamentos Section (fused with Benefícios) -->
-    <section id="tratamentos" class="py-20 bg-white transition-section">
+    <section data-section="tratamentos" id="tratamentos" class="py-20 bg-white transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">Como a terapia pode te ajudar</h2>
@@ -503,7 +503,7 @@
     </section>
 
     <!-- Depoimentos Section -->
-    <section class="py-20 bg-soft-bg transition-section">
+    <section data-section="depoimentos" class="py-20 bg-soft-bg transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">O que dizem meus pacientes</h2>
@@ -568,7 +568,7 @@
     </section>
 
     <!-- Como Funciona Section -->
-    <section id="trabalho" class="py-20 bg-white transition-section">
+    <section data-section="trabalho" id="trabalho" class="py-20 bg-white transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">Como funciona meu trabalho</h2>
@@ -629,7 +629,7 @@
     </section>
 
     <!-- Instagram Section -->
-    <section class="py-20 bg-soft-bg transition-section">
+    <section data-section="instagram" class="py-20 bg-soft-bg transition-section">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-12 justify-center">
                 <div class="text-center md:text-left max-w-2xl">
@@ -638,6 +638,7 @@
                     <p class="text-gray-600 mb-8 max-w-lg">Conteúdos sobre saúde mental, autocuidado e dicas práticas
                         baseadas em evidências científicas.</p>
                     <a href="https://instagram.com/psi.anniaralima" target="_blank" rel="noopener noreferrer"
+                        data-social="instagram" data-loc="secao_instagram"
                         class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3.5 px-8 rounded-full hover:from-purple-600 hover:to-pink-600 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
                         <svg class="icon text-xl" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-instagram"></use></svg>
                         @psi.anniaralima
@@ -648,13 +649,14 @@
     </section>
 
     <!-- Agendar Section -->
-    <section id="agendar" class="relative py-20 bg-white transition-section overflow-hidden">
+    <section data-section="agendar" id="agendar" class="relative py-20 bg-white transition-section overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Agende sua Consulta</h2>
             <p class="text-lg md:text-xl mb-10 text-gray-600 max-w-2xl mx-auto">Dê o primeiro passo para transformar sua
                 vida. Estou aqui para te acompanhar nessa jornada.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://api.whatsapp.com/send?phone=34678217421&text=Ol%C3%A1!%20Venho%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20terapia."
+                    data-wa="agendar" target="_blank" rel="noopener noreferrer"
                     class="bg-green-600 text-white font-bold text-xl py-4 px-8 rounded-full hover:bg-green-700 hover:shadow-xl transition-all duration-300 inline-flex items-center justify-center hover:-translate-y-1">
                     <svg class="icon mr-2 text-xl" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
                     Agendar pelo WhatsApp
@@ -696,17 +698,19 @@
                     <p class="text-white/85 text-sm mb-3"><svg class="icon mr-2 text-white/85" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><use href="#i-envelope"></use></svg>anniarallima@gmail.com</p>
                     <div class="flex space-x-3 mt-6">
                         <a href="https://instagram.com/psi.anniaralima" target="_blank" rel="noopener noreferrer"
+                            data-social="instagram" data-loc="footer"
                             class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary hover:bg-accent hover:text-primary-dark transition-all duration-300"
                             aria-label="Instagram">
                             <svg class="icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-instagram"></use></svg>
                         </a>
                         <a href="https://www.linkedin.com/in/anniara-lima" target="_blank" rel="noopener noreferrer"
+                            data-social="linkedin" data-loc="footer"
                             class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-primary hover:bg-accent hover:text-primary-dark transition-all duration-300"
                             aria-label="LinkedIn">
                             <svg class="icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-linkedin-in"></use></svg>
                         </a>
                         <a href="https://api.whatsapp.com/send?phone=34678217421&text=Ol%C3%A1!%20Venho%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20terapia."
-                            target="_blank" rel="noopener noreferrer"
+                            data-wa="footer" target="_blank" rel="noopener noreferrer"
                             class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all duration-300"
                             aria-label="WhatsApp">
                             <svg class="icon" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><use href="#i-whatsapp"></use></svg>
@@ -721,7 +725,7 @@
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a id="whatsappButton"
+    <a id="whatsappButton" data-wa="float"
         href="https://api.whatsapp.com/send?phone=34678217421&text=Ol%C3%A1!%20Venho%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20terapia."
         target="_blank" rel="noopener noreferrer"
         class="fixed bottom-8 right-8 bg-green-600 text-white w-14 h-14 rounded-full shadow-lg hover:bg-green-700 hover:shadow-xl transition-all duration-300 opacity-0 invisible flex items-center justify-center hover:-translate-y-1 z-50">
@@ -820,6 +824,98 @@
                 });
             });
         });
+    </script>
+
+    <!-- Camada de dados para GA4/GTM.
+         Só empilha eventos no dataLayer; sem o container do GTM instalado, não
+         envia nada para lugar nenhum. É de propósito: a instrumentação precisa
+         existir ANTES de ligar a medição, senão o primeiro mês de dados nasce
+         enviesado (ver TODO.md, bloco 1.4). -->
+    <script>
+        (function () {
+            var dl = (window.dataLayer = window.dataLayer || []);
+
+            // Origem da visita, guardada na sessão: o clique no WhatsApp costuma
+            // acontecer depois de a pessoa navegar, quando os parâmetros da URL
+            // já se perderam.
+            var CHAVE = 'anni_origem';
+            function origem() {
+                try {
+                    var salvo = sessionStorage.getItem(CHAVE);
+                    if (salvo) return JSON.parse(salvo);
+                    var q = new URLSearchParams(location.search);
+                    var o = {
+                        utm_source: q.get('utm_source') || '',
+                        utm_medium: q.get('utm_medium') || '',
+                        utm_campaign: q.get('utm_campaign') || '',
+                        gclid: q.get('gclid') || '',
+                        fbclid: q.get('fbclid') || '',
+                        referrer: document.referrer || ''
+                    };
+                    sessionStorage.setItem(CHAVE, JSON.stringify(o));
+                    return o;
+                } catch (e) {
+                    return {}; // sessionStorage bloqueado: segue sem atribuição
+                }
+            }
+
+            function push(evento, dados) {
+                var payload = { event: evento };
+                var o = origem();
+                for (var k in o) { payload[k] = o[k]; }
+                for (var k in (dados || {})) { payload[k] = dados[k]; }
+                dl.push(payload);
+            }
+
+            // Cliques no WhatsApp — este é o evento de lead.
+            document.querySelectorAll('[data-wa]').forEach(function (a) {
+                a.addEventListener('click', function () {
+                    push('lead_whatsapp', { posicao: a.getAttribute('data-wa') });
+                });
+            });
+
+            // Cliques em redes sociais.
+            document.querySelectorAll('[data-social]').forEach(function (a) {
+                a.addEventListener('click', function () {
+                    push('clique_social', {
+                        rede: a.getAttribute('data-social'),
+                        local: a.getAttribute('data-loc') || ''
+                    });
+                });
+            });
+
+            // Seções efetivamente vistas. Como o site é uma página só, é isso que
+            // substitui a noção de "páginas visitadas".
+            var vistas = {};
+            var observador = new IntersectionObserver(function (entradas) {
+                entradas.forEach(function (e) {
+                    var nome = e.target.getAttribute('data-section');
+                    if (e.isIntersecting && nome && !vistas[nome]) {
+                        vistas[nome] = true;
+                        push('secao_vista', { secao: nome });
+                    }
+                });
+            // A seção conta como vista quando entra na metade central da tela.
+            // Não usar threshold de fração: a seção "sobre" tem 1680px contra 823px
+            // de viewport no celular, então no máximo 49% dela cabe na tela e um
+            // threshold de 0.5 jamais dispararia — a medição diria que ninguém lê.
+            }, { rootMargin: '-25% 0px -25% 0px', threshold: 0 });
+            document.querySelectorAll('[data-section]').forEach(function (s) {
+                observador.observe(s);
+            });
+
+            // Engajamento: 30s na página E mais da metade rolada. Separa visita
+            // real de rejeição — de novo, necessário por ser página única.
+            var rolou = false, tempo = false, enviado = false;
+            function avaliar() {
+                if (rolou && tempo && !enviado) { enviado = true; push('engajado'); }
+            }
+            setTimeout(function () { tempo = true; avaliar(); }, 30000);
+            window.addEventListener('scroll', function () {
+                var total = document.body.scrollHeight - window.innerHeight;
+                if (total > 0 && window.pageYOffset / total >= 0.5) { rolou = true; avaliar(); }
+            }, { passive: true });
+        })();
     </script>
 </body>
 
