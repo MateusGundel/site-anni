@@ -49,11 +49,14 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), interest-cohort=()"
-    # O site não carrega mais nada de terceiro: CSS, fontes, ícones e imagens são
-    # todos locais. Por isso dá para proibir origem externa de script.
-    # ATENÇÃO: ao instalar GTM/GA4, incluir aqui googletagmanager.com e
-    # google-analytics.com em script-src/connect-src, senão as tags são bloqueadas.
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'"
+    # CSS, fontes, ícones e imagens continuam todos locais. As únicas origens
+    # externas liberadas são as do Google Tag Manager e do Analytics:
+    #   script-src  -> carrega o gtm.js e as tags que ele injeta
+    #   connect-src -> envio dos hits do GA4
+    #   img-src     -> pixels de rastreamento em GIF
+    #   frame-src   -> iframe do <noscript> do GTM
+    # Ao adicionar o pixel da Meta, incluir connect.facebook.net em script-src.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://*.google-analytics.com https://www.googletagmanager.com; frame-src https://www.googletagmanager.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'"
 
 # Imagens e fontes têm nome estável e conteúdo imutável: podem ser cacheadas por
 # um ano. Hoje elas vêm com max-age=0, must-revalidate — ou seja, revalidação a

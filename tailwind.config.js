@@ -2,7 +2,9 @@
 // Mesmo tema que antes vivia inline no index.html, agora usado pelo build local.
 // Regerar o CSS depois de mexer em classes:  npm run css
 module.exports = {
-    content: ['./index.html'],
+    // Toda página nova precisa entrar aqui, senão as classes que só ela usa
+    // não são geradas e a página sai sem estilo.
+    content: ['./index.html', './privacidade.html'],
     theme: {
         extend: {
             colors: {
